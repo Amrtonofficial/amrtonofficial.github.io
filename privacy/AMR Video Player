@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official Privacy Policy and Data Security Standards for AMR Video Player by Amrton. Built on zero-knowledge architecture and local-first data custody.">
+    <title>Privacy Policy &amp; Data Security Standards - AMR Video Player</title>
+    <style>
+        :root {
+            --bg-canvas: #070B13;
+            --surface-card: #0F172A;
+            --surface-card-elevated: #1E293B;
+            --surface-card-subtle: #141E33;
+            --text-primary: #F8FAFC;
+            --text-secondary: #94A3B8;
+            --text-muted: #64748B;
+            --accent-cyan: #38BDF8;
+            --accent-cyan-glow: rgba(56, 189, 248, 0.18);
+            --accent-blue: #2563EB;
+            --accent-emerald: #10B981;
+            --accent-emerald-glow: rgba(16, 185, 129, 0.15);
+            --accent-purple: #A855F7;
+            --accent-amber: #F59E0B;
+            --border-default: #334155;
+            --border-subtle: #1E293B;
+            --code-bg: rgba(56, 189, 248, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-canvas);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 32px 16px 64px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* Top Header Card */
+        .hero-header {
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%);
+            border: 1px solid var(--border-default);
+            border-radius: 24px;
+            padding: 40px 36px;
+            box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.6);
+            margin-bottom: 28px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-header::after {
+            content: "";
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 240px;
+            height: 240px;
+            background: radial-gradient(circle, var(--accent-cyan-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11.5px;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            border: 1px solid;
+        }
+
+        .badge-cyan {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--accent-cyan);
+            border-color: rgba(56, 189, 248, 0.35);
+        }
+
+        .badge-green {
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--accent-emerald);
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+
+        .main-title {
+            font-size: 34px;
+            font-weight: 900;
+            letter-spacing: -0.8px;
+            line-height: 1.2;
+            color: #FFFFFF;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 720px;
+            margin-bottom: 24px;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 13.5px;
+        }
+
+        .meta-box strong {
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 2px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--accent-cyan);
+        }
+
+        .meta-box span {
+            color: var(--text-secondary);
+        }
+
+        /* Executive Summary Pillars */
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .pillar-card {
+            background: var(--surface-card);
+            border: 1px solid var(--border-default);
+            border-radius: 16px;
+            padding: 20px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .pillar-card:hover {
+            border-color: var(--accent-cyan);
+            transform: translateY(-2px);
+        }
+
+        .pillar-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .pillar-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+
+        .pillar-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Main Content Container */
+        .content-card {
+            background: var(--surface-card);
+            border: 1px solid var(--border-default);
+            border-radius: 24px;
+            padding: 40px 36px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Table of Contents */
+        .toc-container {
+            background: var(--surface-card-subtle);
+            border: 1px solid var(--border-default);
+            border-radius: 16px;
+            padding: 22px 24px;
+            margin-bottom: 36px;
+        }
+
+        .toc-title {
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--accent-cyan);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toc-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 8px 24px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-list li a {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.15s ease;
+        }
+
+        .toc-list li a:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* Typography & Layout */
+        h2 {
+            font-size: 22px;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin-top: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #CBD5E1;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 24px;
+            color: #CBD5E1;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 14.5px;
+        }
+
+        strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        code {
+            background: var(--code-bg);
+            color: var(--accent-cyan);
+            padding: 2px 7px;
+            border-radius: 6px;
+            font-family: ui-monospace, "SF Mono", Monaco, Consolas, monospace;
+            font-size: 13px;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        /* Highlight Callout Box */
+        .callout {
+            background: rgba(56, 189, 248, 0.06);
+            border-left: 4px solid var(--accent-cyan);
+            border-radius: 0 12px 12px 0;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border-top: 1px solid rgba(56, 189, 248, 0.15);
+            border-right: 1px solid rgba(56, 189, 248, 0.15);
+            border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+        }
+
+        .callout-success {
+            background: rgba(16, 185, 129, 0.06);
+            border-left-color: var(--accent-emerald);
+            border-top-color: rgba(16, 185, 129, 0.15);
+            border-right-color: rgba(16, 185, 129, 0.15);
+            border-bottom-color: rgba(16, 185, 129, 0.15);
+        }
+
+        .callout p {
+            margin-bottom: 0;
+            font-size: 14.5px;
+        }
+
+        /* Matrix Tables */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 24px 0;
+            border-radius: 14px;
+            border: 1px solid var(--border-default);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13.5px;
+            text-align: left;
+        }
+
+        th {
+            background: var(--surface-card-elevated);
+            color: var(--text-primary);
+            padding: 14px 18px;
+            font-weight: 700;
+            border-bottom: 1px solid var(--border-default);
+            letter-spacing: 0.3px;
+        }
+
+        td {
+            padding: 14px 18px;
+            border-bottom: 1px solid var(--border-subtle);
+            color: #CBD5E1;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.015);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Regulatory Grid */
+        .compliance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .compliance-card {
+            background: var(--surface-card-subtle);
+            border: 1px solid var(--border-default);
+            border-radius: 14px;
+            padding: 18px 20px;
+        }
+
+        .compliance-badge {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--accent-emerald);
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        .compliance-card h4 {
+            font-size: 16px;
+            color: #FFFFFF;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .compliance-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+
+        /* Contact Box */
+        .contact-card {
+            background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+            border: 1px solid var(--border-default);
+            border-radius: 18px;
+            padding: 24px 28px;
+            margin-top: 32px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-info h3 {
+            margin-top: 0;
+            margin-bottom: 6px;
+            color: #FFFFFF;
+        }
+
+        .contact-info p {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .contact-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-blue);
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .contact-link-btn:hover {
+            background: #1D4ED8;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 48px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            padding-top: 24px;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 16px 12px 40px;
+            }
+            .hero-header, .content-card {
+                padding: 24px 18px;
+                border-radius: 18px;
+            }
+            .main-title {
+                font-size: 26px;
+            }
+            .meta-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- Hero Header -->
+        <header class="hero-header">
+            <div class="badge-row">
+                <span class="badge badge-cyan">🔒 Zero-Knowledge Privacy</span>
+                <span class="badge badge-green">✓ 100% Offline Processing</span>
+                <span class="badge badge-cyan">🛡️ Google Play Verified</span>
+            </div>
+            <h1 class="main-title">Privacy Policy &amp; Security Standards</h1>
+            <p class="subtitle">Official Data Protection, Architecture Disclosure, and Global Regulatory Compliance Declaration for <strong>AMR Video Player</strong>.</p>
+            
+            <div class="meta-grid">
+                <div class="meta-box">
+                    <strong>Developer &amp; Publisher</strong>
+                    <span>Amrton</span>
+                </div>
+                <div class="meta-box">
+                    <strong>Application Package</strong>
+                    <span><code>com.amrton.amrvideoplayer</code></span>
+                </div>
+                <div class="meta-box">
+                    <strong>Effective Global Date</strong>
+                    <span>October 2026 (Continuous Version Sync)</span>
+                </div>
+                <div class="meta-box">
+                    <strong>Official Inquiries</strong>
+                    <span><a href="mailto:amrtonofficial@gmail.com">amrtonofficial@gmail.com</a></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- 4 Core Privacy Pillars -->
+        <div class="pillar-grid">
+            <div class="pillar-card">
+                <div class="pillar-icon">🚫</div>
+                <div class="pillar-title">Zero Data Collection</div>
+                <div class="pillar-desc">We do not collect, monitor, track, sell, or transmit any personal information, watch history, or private media files.</div>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">⚡</div>
+                <div class="pillar-title">100% On-Device Engine</div>
+                <div class="pillar-desc">Hardware-accelerated decoding, thumbnail generation, and metadata indexing occur strictly inside your local device CPU/GPU.</div>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">🔐</div>
+                <div class="pillar-title">Encrypted Private Vault</div>
+                <div class="pillar-desc">PIN credentials utilize device-salted SHA-256 with constant-time verification and Android FLAG_SECURE screen shielding.</div>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">🛡️</div>
+                <div class="pillar-title">Zero Ad SDKs or Trackers</div>
+                <div class="pillar-desc">Completely free of advertising frameworks, telemetry beacons, Google Analytics, Firebase trackers, and third-party data brokers.</div>
+            </div>
+        </div>
+
+        <!-- Main Content Card -->
+        <main class="content-card">
+
+            <!-- Table of Contents -->
+            <nav class="toc-container">
+                <div class="toc-title">📑 Table of Contents</div>
+                <ul class="toc-list">
+                    <li><a href="#section-1">1. Scope and System Architecture</a></li>
+                    <li><a href="#section-2">2. Local Data Processing &amp; Media Handling</a></li>
+                    <li><a href="#section-3">3. Private Vault &amp; Cryptographic Hygiene</a></li>
+                    <li><a href="#section-4">4. Network Streams &amp; Local Area Casting</a></li>
+                    <li><a href="#section-5">5. Android System Permissions Matrix</a></li>
+                    <li><a href="#section-6">6. Third-Party Integrations &amp; Zero-Tracker Policy</a></li>
+                    <li><a href="#section-7">7. Global Regulatory Rights (GDPR, CCPA, COPPA)</a></li>
+                    <li><a href="#section-8">8. Data Retention, Custody &amp; Erasure</a></li>
+                    <li><a href="#section-9">9. Policy Updates &amp; Contact Desk</a></li>
+                </ul>
+            </nav>
+
+            <!-- Section 1 -->
+            <section id="section-1">
+                <h2>1. Scope and System Architecture</h2>
+                <p>This Privacy Policy applies to the official Android mobile application <strong>AMR Video Player</strong> (Package Identifier: <code>com.amrton.amrvideoplayer</code>), developed and published by <strong>Amrton</strong> ("we", "us", or "our").</p>
+                <p>AMR Video Player is engineered as an <strong>offline-first, zero-knowledge, hardware-accelerated media player</strong> designed to render locally stored video and audio formats (MKV, MP4, WebM, AVI, FLV, TS, 4K/HDR10+, AV1) with zero reliance on remote backend servers.</p>
+                <div class="callout callout-success">
+                    <p><strong>Core Guarantee:</strong> You are not required to create an account, log in, provide an email address, or disclose any personal identifiable information (PII) to utilize any feature or function in AMR Video Player.</p>
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section id="section-2">
+                <h2>2. Local Data Processing &amp; Media Handling</h2>
+                <p>To provide high-performance playback, subtitle synchronization, playlist management, and folder browsing, the application interacts exclusively with local device storage:</p>
+                <ul>
+                    <li><strong>MediaStore Indexing:</strong> The app queries the Android OS <code>MediaStore.Video</code> content provider to index video titles, playback durations, frame dimensions, and MIME types stored on the device or inserted SD cards.</li>
+                    <li><strong>On-Device Thumbnail Caching:</strong> Video thumbnail previews and live scrubbing frames are generated dynamically on-device and stored inside the app’s private cache directory. These cached frames never leave your device.</li>
+                    <li><strong>Subtitle Parsing:</strong> Embedded subtitle streams (ASS, SSA, SRT, VTT, PGS, SUB) and external subtitle files loaded by the user are parsed in-memory on the local device.</li>
+                    <li><strong>Playback State &amp; Resume Position:</strong> Video resume timestamps, audio boost levels, equalizer presets, playback speed preferences, and theme selections are stored strictly on-device in encrypted Jetpack DataStore Preferences and Room SQLite database tables.</li>
+                </ul>
+            </section>
+
+            <!-- Section 3 -->
+            <section id="section-3">
+                <h2>3. Private Vault &amp; Cryptographic Hygiene</h2>
+                <p>AMR Video Player includes an on-device <strong>Privacy Vault</strong> for isolating sensitive personal videos behind PIN code authentication:</p>
+                <ul>
+                    <li><strong>Cryptographic Salting:</strong> User PINs and security answer hashes are computed using SHA-256 combined with a random, device-bound unique cryptographic salt. Plaintext PINs are never stored anywhere on the file system.</li>
+                    <li><strong>Constant-Time Verification:</strong> Authentication checks utilize constant-time comparison algorithms to mitigate side-channel and timing attacks.</li>
+                    <li><strong>Operating System Screen Shield (<code>FLAG_SECURE</code>):</strong> When browsing the Private Vault or entering credentials, the application activates Android's <code>WindowManager.LayoutParams.FLAG_SECURE</code>. This prevents unauthorized screenshot capture, screen recording, and exposure in the Android Recent Apps / Multitasking preview switcher.</li>
+                    <li><strong>Zero Cloud Backdoor:</strong> Amrton does not possess master decryption keys or remote access mechanisms. If you uninstall the app or clear app data without unhiding vaulted videos, recovery is physically impossible from remote sources.</li>
+                </ul>
+            </section>
+
+            <!-- Section 4 -->
+            <section id="section-4">
+                <h2>4. Network Streams &amp; Local Area Casting</h2>
+                <ul>
+                    <li><strong>User-Initiated Network Streams:</strong> If you enter a direct media URL (HTTP, HTTPS, RTSP, RTMP, HLS, DASH), the app initiates a direct client-to-server connection strictly to the third-party endpoint specified. Amrton operates no intermediary proxy, relay, or telemetry collector.</li>
+                    <li><strong>Local Wi-Fi Casting:</strong> Chromecast and DLNA casting protocols operate strictly within your local wireless network (LAN) directly between your phone and your receiver display device. No streaming metadata is transmitted outside your local network.</li>
+                </ul>
+            </section>
+
+            <!-- Section 5 -->
+            <section id="section-5">
+                <h2>5. Android System Permissions Matrix</h2>
+                <p>AMR Video Player complies with Android’s <strong>Least-Privilege Security Principle</strong> and Google Play Scoped Storage directives. The table below provides full transparency regarding each declared permission:</p>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Android Permission</th>
+                                <th>Classification</th>
+                                <th>Target API</th>
+                                <th>Functional Justification</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>READ_MEDIA_VIDEO</code></td>
+                                <td>Dangerous (Runtime)</td>
+                                <td>API 33+ (Android 13+)</td>
+                                <td>Allows the player to index and play local video files located on device storage without requesting broad storage access.</td>
+                            </tr>
+                            <tr>
+                                <td><code>READ_MEDIA_VISUAL_USER_SELECTED</code></td>
+                                <td>Dangerous (Runtime)</td>
+                                <td>API 34+ (Android 14+)</td>
+                                <td>Supports Android 14+ Partial Media Picker so users can grant access strictly to selected clips.</td>
+                            </tr>
+                            <tr>
+                                <td><code>POST_NOTIFICATIONS</code></td>
+                                <td>Dangerous (Runtime)</td>
+                                <td>API 33+ (Android 13+)</td>
+                                <td>Displays continuous playback notification controls (Play, Pause, Seek, Skip) on lockscreen and notification shade.</td>
+                            </tr>
+                            <tr>
+                                <td><code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></td>
+                                <td>Special Type (Service)</td>
+                                <td>API 34+ (Android 14+)</td>
+                                <td>Ensures uninterrupted background audio playback when the user switches apps or turns off the screen.</td>
+                            </tr>
+                            <tr>
+                                <td><code>INTERNET</code> &amp; <code>ACCESS_NETWORK_STATE</code></td>
+                                <td>Normal (Install-Time)</td>
+                                <td>All Versions</td>
+                                <td>Used strictly when the user streams an online video URL or discovers local Chromecast devices over Wi-Fi.</td>
+                            </tr>
+                            <tr>
+                                <td><code>WAKE_LOCK</code></td>
+                                <td>Normal (Install-Time)</td>
+                                <td>All Versions</td>
+                                <td>Prevents the screen from dimming or locking during active full-screen video playback.</td>
+                            </tr>
+                            <tr>
+                                <td><code>MODIFY_AUDIO_SETTINGS</code></td>
+                                <td>Normal (Install-Time)</td>
+                                <td>All Versions</td>
+                                <td>Permits hardware volume control integration, 5-band equalizer adjustments, and software audio pre-amp boost.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="callout">
+                    <p><strong>Prohibited Permissions Confirmation:</strong> AMR Video Player <strong>does not request or utilize</strong> broad storage permissions (<code>MANAGE_EXTERNAL_STORAGE</code>), nor does it access Location, Camera, Contacts, Microphone, SMS, Call Logs, or Unique Hardware Telemetry IDs (IMEI/MAC).</p>
+                </div>
+            </section>
+
+            <!-- Section 6 -->
+            <section id="section-6">
+                <h2>6. Third-Party Integrations &amp; Zero-Tracker Policy</h2>
+                <p>Commercial surveillance architectures violate our engineering standards. AMR Video Player adheres strictly to a zero-third-party tracking policy:</p>
+                <ul>
+                    <li><strong>No Commercial Ad Networks:</strong> Zero integration with Google AdMob, Unity Ads, AppLovin, ironSource, or Facebook Audience Network.</li>
+                    <li><strong>No User Tracking SDKs:</strong> Zero inclusion of Google Firebase Analytics, Mixpanel, AppsFlyer, Adjust, Segment, or Facebook Graph SDK.</li>
+                    <li><strong>No Data Brokers:</strong> We do not sell, rent, monetize, or disclose user data, usage telemetry, or device states to any commercial entity.</li>
+                </ul>
+            </section>
+
+            <!-- Section 7 -->
+            <section id="section-7">
+                <h2>7. Global Regulatory Rights &amp; Compliance</h2>
+
+                <div class="compliance-grid">
+                    <div class="compliance-card">
+                        <span class="compliance-badge">🇪🇺 European Union</span>
+                        <h4>GDPR &amp; UK-GDPR</h4>
+                        <p>Articles 12–23 fulfilled. Zero data profiling, complete local physical custody, and instantaneous single-tap data erasure.</p>
+                    </div>
+                    <div class="compliance-card">
+                        <span class="compliance-badge">🇺🇸 California</span>
+                        <h4>CCPA / CPRA</h4>
+                        <p>We do not sell or share personal information. Equal service quality guaranteed regardless of privacy choices.</p>
+                    </div>
+                    <div class="compliance-card">
+                        <span class="compliance-badge">👶 Child Safety</span>
+                        <h4>COPPA Compliant</h4>
+                        <p>Safe for users of all ages. Does not collect personal data from children under 13; completely ad-free and tracking-free.</p>
+                    </div>
+                    <div class="compliance-card">
+                        <span class="compliance-badge">🌐 International</span>
+                        <h4>LGPD, PIPEDA &amp; DPDP</h4>
+                        <p>Full alignment with Brazilian LGPD, Canadian PIPEDA, and Indian DPDP data minimization principles.</p>
+                    </div>
+                </div>
+
+                <h3>Exercise of Legal Rights</h3>
+                <p>Because 100% of your data remains exclusively on your local hardware device, you maintain immediate self-service execution over all statutory data rights without submitting formal requests:</p>
+                <ul>
+                    <li><strong>Right of Access &amp; Portability:</strong> All settings, playlists, and histories are stored in standard local SQLite / DataStore formats accessible directly on your device.</li>
+                    <li><strong>Right to Erasure (Right to Be Forgotten):</strong> Users can completely wipe all thumbnails, playback history, resume points, and cached metadata in <strong>Settings &gt; Storage &amp; Cache &gt; Clear All Cache</strong>.</li>
+                </ul>
+            </section>
+
+            <!-- Section 8 -->
+            <section id="section-8">
+                <h2>8. Data Retention, Custody &amp; Erasure</h2>
+                <p>Data retention is governed strictly by the physical state of the host device:</p>
+                <ul>
+                    <li><strong>Instant Cache Purge:</strong> Within the app settings, tapping <em>"Clear Playback History"</em> or <em>"Clear Thumbnail Cache"</em> executes an immediate local disk purge.</li>
+                    <li><strong>Application Removal:</strong> Uninstalling the application triggers Android’s operating system to permanently delete the entire app sandbox directory (<code>/data/data/com.amrton.amrvideoplayer</code>), including all databases, preference files, and cached assets.</li>
+                </ul>
+            </section>
+
+            <!-- Section 9 -->
+            <section id="section-9">
+                <h2>9. Policy Updates &amp; Contact Desk</h2>
+                <p>We reserve the right to revise this Privacy Policy to reflect future Android OS platform updates, Google Play developer policies, or technological advancements. Any adjustments will be published directly to our official privacy portal with an updated effective revision date.</p>
+
+                <div class="contact-card">
+                    <div class="contact-info">
+                        <h3>Direct Inquiries &amp; Developer Support</h3>
+                        <p>For questions, audit inquiries, or regulatory feedback, reach our official developer desk:</p>
+                        <p style="margin-top: 4px;"><strong>Official Email:</strong> <a href="mailto:amrtonofficial@gmail.com">amrtonofficial@gmail.com</a></p>
+                    </div>
+                    <a href="https://sites.google.com/view/amrton/amr-video-player-privacy-policy" target="_blank" rel="noopener noreferrer" class="contact-link-btn">
+                        Visit Web Portal ↗
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Amrton. All rights reserved. Built with privacy-first zero-knowledge architecture.</p>
+            <p style="margin-top: 6px; font-size: 12px;">AMR Video Player &bull; Application ID: <code>com.amrton.amrvideoplayer</code> &bull; Official Brand: Amrton</p>
+        </footer>
+    </div>
+
+</body>
+</html>
