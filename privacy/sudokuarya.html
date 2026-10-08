@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Sudoku Arya by Amrton</title>
+    <style>
+        :root {
+            --primary: #0F172A;
+            --accent: #2563EB;
+            --text-main: #334155;
+            --text-light: #64748B;
+            --bg-card: #FFFFFF;
+            --bg-page: #F8FAFC;
+            --border: #E2E8F0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 36px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        .header {
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 26px;
+            margin: 0 0 8px 0;
+            font-weight: 800;
+        }
+
+        .meta {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 18px;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+        }
+
+        p, li {
+            font-size: 14.5px;
+            color: var(--text-main);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .footer {
+            margin-top: 36px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .contact-box {
+            background-color: #EFF6FF;
+            border: 1px solid #BFDBFE;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-top: 24px;
+        }
+
+        .contact-box p {
+            margin: 0;
+            color: #1E40AF;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1>Privacy Policy</h1>
+                <div class="meta">
+                    <strong>App Title:</strong> Sudoku Arya<br>
+                    <strong>Developer / Publisher:</strong> Amrton<br>
+                    <strong>Official Contact:</strong> amrtonofficial@gmail.com<br>
+                    <strong>Last Updated:</strong> 2026
+                </div>
+            </div>
+
+            <p>Welcome to <strong>Sudoku Arya</strong> ("we," "our," or "us"), crafted and published by <strong>Amrton</strong>. We respect your privacy and are committed to protecting user data. This Privacy Policy details how data is managed within Sudoku Arya.</p>
+
+            <h2>1. Offline-First Architecture & Local Data</h2>
+            <p>Sudoku Arya is built with a privacy-first, offline-ready architecture. By default, your game progress, solve times, level masteries, streaks, and settings are saved strictly on your local device storage using encrypted Room SQLite databases and SharedPreferences.</p>
+
+            <h2>2. Optional Firebase Cloud Account & Synchronization</h2>
+            <p>To provide users with the option to back up and restore game progression across devices, Sudoku Arya provides an optional cloud sync service powered by Google Firebase:</p>
+            <ul>
+                <li><strong>Optional Sign-In:</strong> You may freely choose whether to sign in or play 100% offline. Signing in is entirely optional.</li>
+                <li><strong>What is Synced:</strong> When you sign in with Firebase Authentication (Email/Password or Account Credentials), your puzzle completion statistics, unlocked difficulty levels, streak milestones, and revive key counts are synchronized securely to Google Cloud Firestore under your private authenticated user profile.</li>
+                <li><strong>No Advertising Trackers:</strong> Your account data is used exclusively to restore and synchronize your game saves. We do not sell, share, or monetize user data with third-party advertisers.</li>
+            </ul>
+
+            <h2>3. Camera & Vision Scanner Permissions</h2>
+            <p>The app offers an AI Vision Scanner allowing players to scan printed paper Sudoku puzzles into the digital board:</p>
+            <ul>
+                <li><strong>Camera Permission (<code>CAMERA</code>):</strong> Used solely during active scanning sessions to capture the physical puzzle grid.</li>
+                <li><strong>On-Device Processing:</strong> Puzzle image analysis is processed ephemerally. Camera feeds are never stored permanently, recorded, or broadcast to external parties.</li>
+            </ul>
+
+            <h2>4. Data Retention & Account Deletion</h2>
+            <p>You have full control over your data:</p>
+            <ul>
+                <li><strong>Local Save Data:</strong> Can be erased instantly at any time by clearing application data in Android System Settings or uninstalling the app.</li>
+                <li><strong>Cloud Data Deletion:</strong> If you use Firebase Cloud Sync, you can sign out at any time from Settings or request complete profile deletion by contacting our support team.</li>
+            </ul>
+
+            <h2>5. Children's Privacy (COPPA & GDPR Compliance)</h2>
+            <p>Sudoku Arya is safe for all age groups. We do not knowingly collect personal information from children under 13 without appropriate consent. All core puzzle experiences function completely without requiring account creation or personal data disclosure.</p>
+
+            <h2>6. Developer Contact & Support</h2>
+            <p>For any questions, feedback, or support regarding Sudoku Arya or this Privacy Policy, please contact:</p>
+            
+            <div class="contact-box">
+                <p>📧 Official Support Email: <a href="mailto:amrtonofficial@gmail.com" style="color: #1D4ED8; text-decoration: underline;">amrtonofficial@gmail.com</a></p>
+                <p style="margin-top: 6px;">🏢 Developer: Amrton</p>
+            </div>
+
+            <div class="footer">
+                © 2026 Amrton. All rights reserved.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
