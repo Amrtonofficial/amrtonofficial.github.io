@@ -2,315 +2,1057 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ytWatchTime Privacy Policy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#EE0F38">
+    <meta name="description" content="Official Privacy & Security Policy for ytWatchTime by Amrton. Learn how your data is protected and secured.">
+    <title>Privacy Policy • ytWatchTime by Amrton</title>
     <style>
         :root {
-            --bg-color: #ffffff;
-            --text-color: #2c3e50;
-            --heading-color: #111827;
-            --accent-red: #d32f2f;
-            --meta-color: #6b7280;
-            --divider-color: #f3f4f6;
-            --card-bg: #f9fafb;
-            --card-border: #e5e7eb;
-            --badge-bg: #fee2e2;
-            --badge-text: #991b1b;
+            --primary: #EE0F38;
+            --primary-dark: #C40B2D;
+            --primary-light: #FF4D6D;
+            --primary-subtle: #FFF1F3;
+            --primary-border: #FFCCD3;
+            
+            --bg-page: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --bg-card-subtle: #F1F5F9;
+            --bg-nav: rgba(255, 255, 255, 0.88);
+            
+            --text-heading: #0F172A;
+            --text-body: #334155;
+            --text-muted: #64748B;
+            --text-light: #94A3B8;
+            
+            --border-light: #E2E8F0;
+            --border-hover: #CBD5E1;
+            
+            --badge-bg: #EEF2F6;
+            --badge-text: #1E293B;
+            
+            --danger-bg: #FEF2F2;
+            --danger-border: #FCA5A5;
+            --danger-text: #991B1B;
+            --danger-accent: #EF4444;
+            
+            --success-bg: #F0FDF4;
+            --success-border: #BBF7D0;
+            --success-text: #166534;
+            
+            --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+            --shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+            --shadow-lg: 0 12px 30px -4px rgba(15, 23, 42, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.06);
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --radius-pill: 9999px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #FF2E55;
+                --primary-dark: #EE0F38;
+                --primary-light: #FF6682;
+                --primary-subtle: rgba(238, 15, 56, 0.12);
+                --primary-border: rgba(238, 15, 56, 0.3);
+                
+                --bg-page: #0B0F19;
+                --bg-card: #151D2E;
+                --bg-card-subtle: #1C263B;
+                --bg-nav: rgba(21, 29, 46, 0.88);
+                
+                --text-heading: #F8FAFC;
+                --text-body: #CBD5E1;
+                --text-muted: #94A3B8;
+                --text-light: #64748B;
+                
+                --border-light: #243048;
+                --border-hover: #334366;
+                
+                --badge-bg: #1E293B;
+                --badge-text: #E2E8F0;
+                
+                --danger-bg: rgba(239, 68, 68, 0.12);
+                --danger-border: rgba(239, 68, 68, 0.35);
+                --danger-text: #FCA5A5;
+                --danger-accent: #F87171;
+                
+                --success-bg: rgba(34, 197, 94, 0.12);
+                --success-border: rgba(34, 197, 94, 0.35);
+                --success-text: #86EFAC;
+                
+                --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+                --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.5);
+                --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.65);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
         }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.65;
+            background-color: var(--bg-page);
+            color: var(--text-body);
+            line-height: 1.7;
+            font-size: 15px;
+            padding: 0;
             margin: 0;
-            padding: 24px 20px 48px 20px;
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        .brand {
+        /* Container Layout */
+        .page-container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 24px 20px 80px 20px;
+        }
+
+        /* Top Sticky Navbar */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--bg-nav);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border-light);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 -20px 24px -20px;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
             font-size: 16px;
-            font-weight: 800;
-            color: var(--heading-color);
-            margin-bottom: 4px;
-            letter-spacing: -0.2px;
+            color: var(--text-heading);
+            text-decoration: none;
         }
 
-        .page-title {
-            font-size: 30px;
-            font-weight: 800;
-            color: var(--heading-color);
-            margin: 0 0 10px 0;
-            letter-spacing: -0.5px;
-            line-height: 1.2;
+        .nav-logo-badge {
+            width: 32px;
+            height: 32px;
+            border-radius: 9px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 2px 8px rgba(238, 15, 56, 0.35);
         }
 
-        .meta-row {
-            font-size: 14px;
-            color: var(--meta-color);
-            margin-bottom: 4px;
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-btn {
+            font-size: 12.5px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: var(--radius-pill);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-btn-secondary {
+            background: var(--bg-card);
+            color: var(--text-heading);
+            border: 1px solid var(--border-light);
+        }
+
+        .nav-btn-secondary:hover {
+            border-color: var(--border-hover);
+            background: var(--bg-card-subtle);
+        }
+
+        .nav-btn-primary {
+            background: var(--primary);
+            color: #FFFFFF;
+            border: none;
+        }
+
+        .nav-btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Hero Header */
+        .hero-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 32px 28px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary) 0%, #FF6584 50%, var(--primary-dark) 100%);
+        }
+
+        .hero-badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .pill-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: var(--radius-pill);
+            letter-spacing: 0.2px;
+        }
+
+        .pill-primary {
+            background: var(--primary-subtle);
+            color: var(--primary);
+            border: 1px solid var(--primary-border);
+        }
+
+        .pill-neutral {
+            background: var(--bg-card-subtle);
+            color: var(--text-muted);
+            border: 1px solid var(--border-light);
+        }
+
+        .pill-success {
+            background: var(--success-bg);
+            color: var(--success-text);
+            border: 1px solid var(--success-border);
+        }
+
+        .hero-title {
+            font-size: 32px;
+            font-weight: 850;
+            color: var(--text-heading);
+            letter-spacing: -0.6px;
+            line-height: 1.25;
+            margin-bottom: 12px;
+        }
+
+        .hero-lead {
+            font-size: 15.5px;
+            line-height: 1.7;
+            color: var(--text-body);
+            margin-bottom: 20px;
+        }
+
+        .hero-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            padding-top: 18px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .meta-label {
+            font-size: 11.5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+        }
+
+        .meta-value {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: var(--text-heading);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Quick Navigation Pills (Table of Contents) */
+        .toc-bar {
+            margin-bottom: 28px;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding-bottom: 8px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+        }
+
+        .toc-list {
+            display: flex;
+            gap: 8px;
+            list-style: none;
+        }
+
+        .toc-pill {
+            display: inline-block;
+            font-size: 12.5px;
+            font-weight: 600;
+            padding: 7px 14px;
+            border-radius: var(--radius-pill);
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            color: var(--text-body);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .toc-pill:hover {
+            background: var(--primary-subtle);
+            border-color: var(--primary-border);
+            color: var(--primary);
+            transform: translateY(-1px);
+        }
+
+        /* Content Sections */
+        .section-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 26px 24px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-sm);
+            transition: border-color 0.2s ease;
+        }
+
+        .section-card:hover {
+            border-color: var(--border-hover);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .section-icon-box {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: var(--primary-subtle);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            font-size: 19px;
+            font-weight: 800;
+            color: var(--text-heading);
+            letter-spacing: -0.3px;
+        }
+
+        h3 {
+            font-size: 15px;
+            font-weight: 750;
+            color: var(--text-heading);
+            margin: 18px 0 8px 0;
             display: flex;
             align-items: center;
             gap: 6px;
         }
 
-        .meta-date {
-            font-size: 14px;
-            color: var(--meta-color);
-            margin-bottom: 20px;
-        }
-
-        .lead {
-            font-size: 15px;
-            line-height: 1.65;
-            color: var(--text-color);
-            margin-bottom: 24px;
-        }
-
-        .divider {
-            height: 1px;
-            background-color: var(--divider-color);
-            margin: 24px 0;
-        }
-
-        h2 {
-            font-size: 20px;
-            font-weight: 800;
-            color: var(--heading-color);
-            margin-top: 24px;
+        p {
             margin-bottom: 12px;
-            border-left: 4px solid var(--accent-red);
-            padding-left: 12px;
-            line-height: 1.3;
+            color: var(--text-body);
         }
 
-        h3 {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--heading-color);
-            margin-top: 18px;
-            margin-bottom: 8px;
-        }
-
-        p, li {
-            font-size: 14px;
-            color: var(--text-color);
+        p:last-child {
+            margin-bottom: 0;
         }
 
         ul {
-            padding-left: 20px;
-            margin-top: 6px;
-            margin-bottom: 14px;
+            list-style: none;
+            padding-left: 0;
+            margin: 10px 0 14px 0;
         }
 
         li {
-            margin-bottom: 6px;
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 8px;
+            font-size: 14.5px;
+            color: var(--text-body);
         }
 
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 10px;
-            padding: 16px;
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 6px;
+            top: -1px;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Data Grid Cards inside Section 2 */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 14px;
             margin: 16px 0;
         }
 
-        .warning-card {
-            background-color: var(--card-bg);
-            border-left: 4px solid var(--accent-red);
-            border-top: 1px solid var(--card-border);
-            border-right: 1px solid var(--card-border);
-            border-bottom: 1px solid var(--card-border);
-            border-radius: 8px;
+        .grid-card {
+            background: var(--bg-card-subtle);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
             padding: 16px;
-            margin: 20px 0;
         }
 
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid var(--card-border);
+        .grid-card h4 {
+            font-size: 14px;
+            font-weight: 750;
+            color: var(--text-heading);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .grid-card ul {
+            margin: 0;
+        }
+
+        .grid-card li {
+            font-size: 13.5px;
+            margin-bottom: 5px;
+            line-height: 1.5;
+        }
+
+        /* Warning Card (Section 5 Anti-Fraud) */
+        .warning-card {
+            background: var(--danger-bg);
+            border: 1px solid var(--danger-border);
+            border-left: 5px solid var(--danger-accent);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .warning-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .warning-header .section-icon-box {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--danger-accent);
+        }
+
+        .warning-title {
+            font-size: 19px;
+            font-weight: 800;
+            color: var(--danger-text);
+        }
+
+        .warning-card li::before {
+            color: var(--danger-accent);
+        }
+
+        /* Informative Callout Note */
+        .callout-note {
+            background: var(--primary-subtle);
+            border: 1px solid var(--primary-border);
+            border-radius: var(--radius-sm);
+            padding: 14px 16px;
+            margin: 14px 0;
+            font-size: 13.5px;
+            color: var(--text-heading);
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        /* Partners / Third Party Grid */
+        .partner-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 14px 0;
+        }
+
+        .partner-chip {
+            background: var(--bg-card-subtle);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-pill);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-heading);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Contact / Appeal Highlight Box */
+        .appeal-box {
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-card-subtle) 100%);
+            border: 1px solid var(--primary-border);
+            border-radius: var(--radius-md);
+            padding: 22px;
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .appeal-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 14px;
+            width: fit-content;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(238, 15, 56, 0.25);
+        }
+
+        .appeal-cta:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(238, 15, 56, 0.35);
+        }
+
+        /* Footer */
+        .footer-section {
+            margin-top: 48px;
+            padding-top: 28px;
+            border-top: 1px solid var(--border-light);
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-logo {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--text-heading);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footer-text {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .footer-badges {
+            display: flex;
+            gap: 12px;
             font-size: 12px;
-            color: var(--meta-color);
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        /* Back to Top Floating Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-md);
+            color: var(--text-heading);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            z-index: 99;
+            transition: all 0.2s ease;
+        }
+
+        .back-to-top:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .page-container {
+                padding: 16px 14px 60px 14px;
+            }
+
+            .sticky-nav {
+                margin: 0 -14px 18px -14px;
+                padding: 10px 14px;
+            }
+
+            .hero-section {
+                padding: 24px 18px;
+            }
+
+            .hero-title {
+                font-size: 26px;
+            }
+
+            .section-card {
+                padding: 20px 16px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .appeal-cta {
+                width: 100%;
+            }
+        }
+
+        @media print {
+            .sticky-nav, .toc-bar, .back-to-top, .appeal-cta {
+                display: none !important;
+            }
+            body {
+                background: white;
+                color: black;
+            }
+            .section-card, .hero-section {
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
         }
     </style>
 </head>
-<body>
+<body id="top">
 
-    <div class="brand">ytWatchTime</div>
-    <h1 class="page-title">Privacy Policy</h1>
-    
-    <div class="meta-row">
-        <span>Owner: Amrton &nbsp;&bull;</span>
+    <div class="page-container">
+
+        <!-- Top Navigation Bar -->
+        <header class="sticky-nav">
+            <a href="#top" class="nav-brand">
+                <div class="nav-logo-badge">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v2h-2V7zm0 4h2v6h-2v-6z"/>
+                    </svg>
+                </div>
+                <span>ytWatchTime</span>
+            </a>
+            <div class="nav-actions">
+                <a href="mailto:Support@Amrton.com" class="nav-btn nav-btn-secondary">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>Support</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Hero Card -->
+        <div class="hero-section">
+            <div class="hero-badge-row">
+                <span class="pill-badge pill-primary">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    Official Amrton Policy
+                </span>
+                <span class="pill-badge pill-success">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                    </svg>
+                    HTTPS 256-Bit Encrypted
+                </span>
+                <span class="pill-badge pill-neutral">GDPR & CCPA Compliant</span>
+            </div>
+
+            <h1 class="hero-title">Privacy &amp; Security Policy</h1>
+            <p class="hero-lead">
+                This Privacy Policy applies exclusively to the <strong>ytWatchTime</strong> mobile application developed, operated, and published by <strong>Amrton</strong>. We respect your confidentiality and are committed to safeguarding personal, device, and network integrity data with enterprise-grade standards.
+            </p>
+
+            <div class="hero-meta-grid">
+                <div class="meta-item">
+                    <span class="meta-label">Publisher &amp; Owner</span>
+                    <span class="meta-value">Amrton</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Official Support</span>
+                    <span class="meta-value">Support@Amrton.com</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Effective Date</span>
+                    <span class="meta-value">August 29, 2026</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Compliance Status</span>
+                    <span class="meta-value">Active &amp; Enforced</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Jump Table of Contents -->
+        <nav class="toc-bar" aria-label="Table of contents">
+            <ul class="toc-list">
+                <li><a href="#section-1" class="toc-pill">1. Purpose</a></li>
+                <li><a href="#section-2" class="toc-pill">2. Data Collected</a></li>
+                <li><a href="#section-3" class="toc-pill">3. Usage Goals</a></li>
+                <li><a href="#section-4" class="toc-pill">4. Third-Party Services</a></li>
+                <li><a href="#section-5" class="toc-pill">5. Anti-Fraud &amp; Misuse</a></li>
+                <li><a href="#section-6" class="toc-pill">6. Security &amp; Storage</a></li>
+                <li><a href="#section-7" class="toc-pill">7. WebView &amp; YouTube</a></li>
+                <li><a href="#section-10" class="toc-pill">10. Your Rights &amp; Appeals</a></li>
+            </ul>
+        </nav>
+
+        <!-- Section 1 -->
+        <article id="section-1" class="section-card">
+            <div class="section-header">
+                <div class="section-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                    </svg>
+                </div>
+                <h2 class="section-title">1. Purpose of the Policy</h2>
+            </div>
+            <p>
+                This policy explains how personal, device, and security-signal data collected during the use of the ytWatchTime application is securely processed, stored, used, and, when necessary, shared in accordance with applicable global data privacy regulations (including GDPR and CCPA).
+            </p>
+            <p>
+                By downloading, accessing, or continuing to use the ytWatchTime application, you acknowledge and agree to the terms described in this policy.
+            </p>
+        </article>
+
+        <!-- Section 2 -->
+        <article id="section-2" class="section-card">
+            <div class="section-header">
+                <div class="section-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                    </svg>
+                </div>
+                <h2 class="section-title">2. Data We Collect</h2>
+            </div>
+            <p>
+                To provide a reliable community platform, manage points, and guarantee fair rewards, ytWatchTime processes the following categories of data:
+            </p>
+
+            <div class="feature-grid">
+                <div class="grid-card">
+                    <h4>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--primary)"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+                        2.1 Device &amp; System Data
+                    </h4>
+                    <ul>
+                        <li>Device brand, model, manufacturer, and hardware specs</li>
+                        <li>Android OS version, build fingerprint, and kernel tags</li>
+                        <li>Hardware ID (HWID), Android ID, and network state</li>
+                        <li>OpenGL renderer and graphics runtime information</li>
+                        <li>App version, build numbers, and crash diagnostics</li>
+                    </ul>
+                </div>
+
+                <div class="grid-card">
+                    <h4>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--primary)"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        2.2 User Account Data
+                    </h4>
+                    <ul>
+                        <li>Google Sign-In email, display name, and avatar URL</li>
+                        <li>YouTube channel name and associated public channel ID</li>
+                        <li>Completed voluntary watch tasks, likes, and subscription proofs</li>
+                        <li>Points/coins balance and activity logs</li>
+                    </ul>
+                </div>
+
+                <div class="grid-card">
+                    <h4>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--primary)"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+                        2.3 App Usage &amp; Billing Data
+                    </h4>
+                    <ul>
+                        <li>Campaign creation history and watch duration metrics</li>
+                        <li>In-app purchases processed via Google Play Billing</li>
+                        <li>App session diagnostics and navigation events</li>
+                        <li>Firebase Analytics metrics and push notification alerts</li>
+                    </ul>
+                </div>
+
+                <div class="grid-card">
+                    <h4>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--primary)"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+                        2.4 Security &amp; Anti-Abuse Signals
+                    </h4>
+                    <ul>
+                        <li>VPN active flag, proxy network detection, transport type</li>
+                        <li>Root binaries check (su, Magisk, busybox)</li>
+                        <li>Emulator / virtual environment detection score</li>
+                        <li>ADB debugging active flag and debuggable runtime check</li>
+                        <li>Auto-clicker &amp; macro accessibility risk flags</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="callout-note">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--primary)" style="flex-shrink:0; margin-top:2px;">
+                    <path d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"/>
+                </svg>
+                <div>
+                    <strong>Data Minimization Notice:</strong> Only boolean flags, integrity scores, and cryptographic hash values are collected for anti-abuse checks. We <strong>never</strong> access your private chats, contacts, gallery, keystrokes, or Google/YouTube passwords.
+                </div>
+            </div>
+
+            <h3>2.5 Optional Data (With User Consent)</h3>
+            <ul>
+                <li><strong>Push Notifications:</strong> Optional notification permission to inform you when campaigns complete or when daily rewards become available.</li>
+            </ul>
+        </article>
+
+        <!-- Section 3 -->
+        <article id="section-3" class="section-card">
+            <div class="section-header">
+                <div class="section-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                </div>
+                <h2 class="section-title">3. Purposes of Data Use</h2>
+            </div>
+            <p>We process collected data strictly for the following operational purposes:</p>
+            <ul>
+                <li>Operating the voluntary creator discovery and reward distribution mechanism.</li>
+                <li>Preventing malicious bot farming, multiple unauthorized device clones, and auto-clickers.</li>
+                <li>Authenticating user credentials securely via Google Sign-In and Credential Manager.</li>
+                <li>Promoting user campaigns strictly within YouTube Community Guidelines.</li>
+                <li>Diagnosing application crashes, performance bottlenecks, and system bugs.</li>
+                <li>Processing point store transactions and subscriptions via Google Play Billing.</li>
+            </ul>
+        </article>
+
+        <!-- Section 4 -->
+        <article id="section-4" class="section-card">
+            <div class="section-header">
+                <div class="section-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/>
+                    </svg>
+                </div>
+                <h2 class="section-title">4. Third-Party Integrations</h2>
+            </div>
+            <p>
+                ytWatchTime integrates with verified industry-leading service providers. Each provider manages data in adherence to strict security standards:
+            </p>
+
+            <div class="partner-chips">
+                <span class="partner-chip">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+                    Google Firebase (Auth &amp; Firestore)
+                </span>
+                <span class="partner-chip">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285F4"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+                    Google Identity Services
+                </span>
+                <span class="partner-chip">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#34A853"><path d="M21 7H3v14h18V7zm-2 12H5V9h14v10z"/></svg>
+                    Google Play In-App Billing
+                </span>
+                <span class="partner-chip">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#EA4335"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+                    Google AdMob
+                </span>
+            </div>
+
+            <p>
+                <strong>Zero Selling:</strong> Amrton does not sell, lease, or monetize your personal identity to data brokers or third-party advertising exchanges.
+            </p>
+        </article>
+
+        <!-- Section 5: Anti-Fraud Card -->
+        <article id="section-5" class="warning-card">
+            <div class="warning-header">
+                <div class="section-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+                    </svg>
+                </div>
+                <h2 class="warning-title">5. Anti-Fraud, Multi-Account, &amp; Fair Play Rules</h2>
+            </div>
+            <p>To preserve community fairness and prevent automated abuse, the following actions are strictly prohibited:</p>
+            <ul>
+                <li><strong>Multi-Account Farming:</strong> Creating more than 3 accounts on the same physical device or shared network will trigger an automatic hardware restriction.</li>
+                <li><strong>Emulators &amp; Modded APKs:</strong> Running ytWatchTime inside virtual machines, cloud emulators, or tampered APKs is restricted.</li>
+                <li><strong>VPN &amp; Proxy Spoofing:</strong> Hiding location through VPN tunnels or data-center proxies to manipulate reward pools is prohibited.</li>
+                <li><strong>Auto-Clickers &amp; Bots:</strong> Utilizing background macro scripts, accessibility auto-tappers, or automated viewers results in permanent bans.</li>
+                <li><strong>Automated Decisions:</strong> Security breaches detected by our integrity engine may restrict account access. Users have the legal right to request manual human review (see Section 10).</li>
+            </ul>
+        </article>
+
+        <!-- Section 6 -->
+        <article id="section-6" class="section-card">
+            <div class="section-header">
+                <div class="section-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                    </svg>
+                </div>
+                <h2 class="section-title">6. Data Storage &amp; Encryption</h2>
+            </div>
+            <p>
+                All network communication with our servers is safeguarded via encrypted TLS 1.3 cryptographic protocols. Databases are protected by multi-tier Firestore security rules with granular access controls. Regular automated audits run continuously to isolate anomalies and protect creator confidentiality.
+            </p>
+        </article>
+
+        <!-- Section 7 -->
+        <article id="section-7" class="section-card">
+            <div class="section-header">
+                <div class="section-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                    </svg>
+                </div>
+                <h2 class="section-title">7. YouTube &amp; In-App WebView Disclosure</h2>
+            </div>
+            <p>
+                ytWatchTime provides an embedded Android WebView to facilitate voluntary video playback and verified task validation:
+            </p>
+            <ul>
+                <li><strong>Independent Platform:</strong> ytWatchTime is an independent application published by Amrton and is not sponsored, endorsed, or affiliated with YouTube LLC or Google LLC.</li>
+                <li><strong>Cookies &amp; Sessions:</strong> Standard session cookies are maintained within the isolated WebView sandbox solely to enable continuous video stream playback.</li>
+                <li><strong>No Credential Access:</strong> We strictly avoid accessing, recording, or storing any Google or YouTube account passwords. All interactions occur directly on official YouTube web endpoints.</li>
+            </ul>
+        </article>
+
+        <!-- Section 8, 9, 11, 12, 13, 14, 15 -->
+        <article class="section-card">
+            <div class="section-header">
+                <div class="section-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5zm4 4h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                    </svg>
+                </div>
+                <h2 class="section-title">8. Global Regulatory Compliance</h2>
+            </div>
+
+            <h3>8.1 International Data Transfers</h3>
+            <p>Data may be processed across secure cloud servers located across different regions (e.g., Google Cloud/Firebase facilities). All transfers comply with standard contractual clauses ensuring equal protection.</p>
+
+            <h3>8.2 Children's Privacy (COPPA)</h3>
+            <p>ytWatchTime is designated for individuals aged 13 and above. We do not intentionally harvest data from children under 13.</p>
+
+            <h3>8.3 Data Retention</h3>
+            <p>Account records and points transactions are retained while your profile is active. Upon account deletion, all personal data is permanently wiped from our production databases within 30 days.</p>
+
+            <h3>8.4 California Privacy Rights (CCPA/CPRA) &amp; GDPR</h3>
+            <p>You have the legal right to request data access, correction, portable export, and permanent deletion at any time without discrimination.</p>
+        </article>
+
+        <!-- Section 10: User Rights & Appeals -->
+        <article id="section-10" class="section-card">
+            <div class="section-header">
+                <div class="section-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                </div>
+                <h2 class="section-title">10. User Rights &amp; Appeals Process</h2>
+            </div>
+            <p>
+                We believe in total transparency. If you wish to inspect your data, request complete account removal, or appeal an automated security restriction, our support team is available to assist you.
+            </p>
+
+            <div class="appeal-box">
+                <div>
+                    <h3 style="margin-top:0;">Request Data Deletion or Submit Appeal</h3>
+                    <p style="font-size:14px; margin-bottom: 8px;">
+                        Send an email directly from your registered Google Account to our dedicated support address. Please include your user email and device details so our moderation team can promptly review your request.
+                    </p>
+                </div>
+                <a href="mailto:Support@Amrton.com?subject=Appeal%20–%20Security%20Decision%20or%20Account%20Query" class="appeal-cta">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>Email Support@Amrton.com</span>
+                </a>
+            </div>
+        </article>
+
+        <!-- Footer -->
+        <footer class="footer-section">
+            <div class="footer-logo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--primary)">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v2h-2V7zm0 4h2v6h-2v-6z"/>
+                </svg>
+                <span>ytWatchTime • Published by Amrton</span>
+            </div>
+            <p class="footer-text">
+                &copy; <span id="current-year">2026</span> Amrton. All rights reserved.
+            </p>
+            <div class="footer-badges">
+                <span>Privacy First</span> &bull;
+                <span>Fair Community</span> &bull;
+                <span>Certified Encryption</span>
+            </div>
+        </footer>
+
+        <!-- Back to Top Button -->
+        <a href="#top" class="back-to-top" title="Back to top" aria-label="Back to top">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+            </svg>
+        </a>
+
     </div>
-    <div class="meta-date">Last Updated: August 29, 2026</div>
 
-    <p class="lead">
-        This Privacy Policy applies exclusively to the <strong>ytWatchTime</strong> mobile application developed and published by Amrton. By using the application, you are deemed to have accepted the terms of this policy.
-    </p>
-
-    <div class="divider"></div>
-
-    <h2>1. Purpose of the Policy</h2>
-    <p>
-        This policy explains how personal, device, and security-signal data collected during the use of the ytWatchTime application is securely processed, stored, used, and, when necessary, shared in accordance with legal regulations.
-    </p>
-
-    <div class="divider"></div>
-
-    <h2>2. Data Collected</h2>
-
-    <h3>2.1. Device and System Data</h3>
-    <ul>
-        <li>Device name, brand, model, and hardware identifiers</li>
-        <li>Android OS version & build information (PRODUCT, MANUFACTURER, BRAND, DEVICE, MODEL, HARDWARE, FINGERPRINT)</li>
-        <li>Hardware ID (HWID), Android ID, MAC address</li>
-        <li>OpenGL renderer and graphics runtime information</li>
-        <li>App version, build numbers, and execution session logs</li>
-        <li>IP address, network provider, and network connection status</li>
-    </ul>
-
-    <h3>2.2. User Account Data</h3>
-    <ul>
-        <li>Email address used for Google Sign-In authentication</li>
-        <li>Name, display name, and profile photo provided by Google Account</li>
-        <li>YouTube channel name and channel ID associated with the account</li>
-        <li>Videos watched, likes completed, subscriptions verified, and completed tasks</li>
-    </ul>
-
-    <h3>2.3. App Usage Data</h3>
-    <ul>
-        <li>Task completion history, earned points/coins transaction logs</li>
-        <li>In-app purchases and subscriptions processed via Google Play Billing</li>
-        <li>App navigation, behavior logs, and feature interaction metrics</li>
-        <li>Notification interaction logs and usage duration</li>
-        <li>Firebase Analytics, Crashlytics diagnostics, and Messaging delivery logs</li>
-    </ul>
-
-    <div class="card">
-        <h3>2.4. Security Signals & Device Integrity Data</h3>
-        <p>Collected to detect abuse, prevent multi-account farming, and ensure fair service operation:</p>
-        <ul>
-            <li><strong>Network Indicators:</strong> VPN active status, proxy usage, transport type (Wi-Fi, Cellular, Ethernet, VPN, Bluetooth), network interface summaries</li>
-            <li><strong>Tethering Indicators:</strong> USB tethering status, Bluetooth tethering, PC connection likelihood</li>
-            <li><strong>Root & Emulation Signals:</strong> Rooted device binaries (su, Magisk), emulator execution score, build tags/props summary</li>
-            <li><strong>System & Debug Signals:</strong> ADB enabled flag, ADB over TCP, app debuggable status</li>
-            <li><strong>Accessibility Risk Analysis:</strong> Detection of suspicious accessibility services (e.g., auto-clicker, macro, or automation tools)</li>
-            <li><strong>Graphics & Runtime:</strong> GL renderer string and GPU fingerprinting</li>
-            <li><strong>Summaries & Hashes:</strong> Build integrity summary, hardware signature, hashed Android ID</li>
-        </ul>
-        <p><em>Note: Only boolean, score, and summary values are collected. No personal messages, keystrokes, or unrelated device content are accessed or stored.</em></p>
-    </div>
-
-    <h3>2.5. Optional Data (with user permission)</h3>
-    <ul>
-        <li>Push Notification permission for campaign status alerts and reward notifications</li>
-    </ul>
-
-    <div class="divider"></div>
-
-    <h2>3. Purposes of Data Use</h2>
-    <ul>
-        <li>Improving application performance, responsiveness, and user experience</li>
-        <li>Operating the voluntary task system and calculating reward distribution fairly</li>
-        <li>Detecting, preventing, and mitigating fraudulent activity (multi-account farming, automated bots, emulator misuse, VPN location spoofing)</li>
-        <li>Authenticating users securely via Google Sign-In</li>
-        <li>Displaying relevant community channels and content</li>
-        <li>Promoting user channels and videos strictly within YouTube's Community Guidelines</li>
-        <li>Error tracking, crash diagnostics, and application security maintenance</li>
-        <li>Processing billing transactions and point store purchases</li>
-    </ul>
-
-    <div class="divider"></div>
-
-    <h2>4. Third-Party Services</h2>
-    <p>ytWatchTime integrates the following trusted external services:</p>
-    <ul>
-        <li><strong>Google Firebase:</strong> Auth, Crashlytics, Messaging, and Realtime/Firestore Analytics</li>
-        <li><strong>Google Sign-In & Credential Manager:</strong> Secure user authentication</li>
-        <li><strong>AdMob & Ad Services:</strong> Ad delivery and frequency management</li>
-        <li><strong>Google Play Billing:</strong> In-app purchases and point store transactions</li>
-    </ul>
-    <p>No personal data is sold or shared with external parties for commercial marketing outside the core service operational scope.</p>
-
-    <div class="warning-card">
-        <h2>5. Anti-Fraud, Multi-Account, and Misuse Policy</h2>
-        <ul>
-            <li><strong>Multi-Account Limit:</strong> Users creating more than 3 accounts from the same device or network IP, or engaging in automated phone farming, may be permanently banned.</li>
-            <li><strong>Emulators & Modified APKs:</strong> Running the application on emulators, virtual devices, or modified/tampered APKs is strictly prohibited.</li>
-            <li><strong>VPN & Proxy Restriction:</strong> Using VPN or proxy networks to manipulate location or bypass limits is restricted.</li>
-            <li><strong>Bots & Auto-Clickers:</strong> Automatic clicking, macro scripts, or background task bots will result in immediate account termination.</li>
-            <li><strong>Coin & Task Abuse:</strong> Abusing the points or campaign system will lead to account suspension and forfeiture of earned points.</li>
-            <li><strong>Automated Decisions:</strong> Security integrity signals may automatically trigger temporary or permanent account/device suspensions. Users may request human review (see Section 10).</li>
-        </ul>
-    </div>
-
-    <div class="divider"></div>
-
-    <h2>6. Data Storage and Security</h2>
-    <p>All user data is transmitted over encrypted HTTPS/TLS channels and stored on secure server infrastructure. Firebase logs are restricted strictly to system diagnosis and performance optimizations. Regular security audits are conducted to prevent unauthorized access.</p>
-
-    <div class="divider"></div>
-
-    <h2>7. WebView, Cookies & Embedded Content</h2>
-    <p>The application uses an embedded Android WebView to render third-party content (e.g., YouTube) for task verification. Within WebView:</p>
-    <ul>
-        <li><strong>Cookies:</strong> First-party and third-party cookies are supported to enable video playback and session state.</li>
-        <li><strong>JavaScript:</strong> JavaScript is enabled for page rendering and minimal verification scripts (e.g., checking voluntary like/subscribe state). Passwords, payment details, or personal messages are NEVER read or captured.</li>
-        <li><strong>Third-Party Content:</strong> Interacting with third-party sites inside WebView is subject to those respective sites' privacy policies and terms of service.</li>
-    </ul>
-
-    <div class="divider"></div>
-
-    <h2>8. International Data Transfers</h2>
-    <p>Data may be processed on secure cloud infrastructure located outside your home jurisdiction (e.g., Google Firebase servers). All transfers strictly comply with international data protection standards and Standard Contractual Clauses.</p>
-
-    <div class="divider"></div>
-
-    <h2>9. Legal Sharing and Disclosures</h2>
-    <p>User information will only be shared with law enforcement or legal authorities if required by valid court order, legal statute, or to investigate severe security violations and fraud.</p>
-
-    <div class="divider"></div>
-
-    <h2>10. User Rights & Appeal Process</h2>
-    <p>Under GDPR, CCPA, and global data privacy standards, you have the right to:</p>
-    <ul>
-        <li>Access a copy of your personal data</li>
-        <li>Request data correction or complete account deletion</li>
-        <li>Withdraw consent for optional permissions</li>
-        <li>Request human review of automated fraud suspensions</li>
-    </ul>
-    <p><strong>Appeal Process:</strong> If your account or device is flagged or suspended by security checks, you may request human review by emailing <strong>Support@Amrton.com</strong> with the subject <em>"Appeal – Security Decision"</em> along with relevant account details.</p>
-
-    <div class="divider"></div>
-
-    <h2>11. Policy Updates</h2>
-    <p>We reserve the right to update this Privacy Policy at any time. Updated versions become effective immediately upon being published inside the app.</p>
-
-    <div class="divider"></div>
-
-    <h2>12. Children's Privacy</h2>
-    <p>ytWatchTime is not intended for children under the age of 13. We do not knowingly collect personal information from minors under 13.</p>
-
-    <div class="divider"></div>
-
-    <h2>13. Data Retention</h2>
-    <p>User account and security log data are retained as long as the service remains operational, or as required by law for fraud prevention and legal compliance.</p>
-
-    <div class="divider"></div>
-
-    <h2>14. Legal Bases for Processing (GDPR)</h2>
-    <p>Processing is based on contractual necessity (operating tasks and points), legitimate interests (security and fraud detection), consent (push notifications), and legal compliance.</p>
-
-    <div class="divider"></div>
-
-    <h2>15. California Privacy Rights (CCPA/CPRA)</h2>
-    <p>California residents may exercise access, deletion, and opt-out rights by contacting us via email. We do not sell user personal information.</p>
-
-    <div class="footer">
-        &copy; 2026 Amrton. All rights reserved.
-    </div>
-
+    <script>
+        // Set dynamic current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
