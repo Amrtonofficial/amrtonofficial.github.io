@@ -3,104 +3,280 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amrton - Mobile Apps & Games</title>
+  <title>Amrton — Mobile Apps & Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #2563eb;
-      --bg: #0f172a;
-      --card-bg: #1e293b;
+      --bg: #090d16;
+      --card-bg: rgba(22, 30, 49, 0.7);
+      --card-hover: rgba(30, 41, 67, 0.85);
+      --border: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(99, 102, 241, 0.4);
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
-      --border: #334155;
+      --primary: #3b82f6;
+      --primary-hover: #2563eb;
+      --accent: #6366f1;
+      --glow: rgba(59, 130, 246, 0.15);
     }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: var(--bg);
       color: var(--text-main);
       line-height: 1.6;
-      padding: 40px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
     }
+
+    /* Ambient background glow */
+    body::before {
+      content: "";
+      position: fixed;
+      top: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.18), transparent 70%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
     .container {
-      max-width: 850px;
+      max-width: 960px;
+      width: 100%;
       margin: 0 auto;
+      padding: 60px 24px 40px;
+      flex: 1;
     }
+
+    /* Header */
     header {
       text-align: center;
-      margin-bottom: 48px;
+      margin-bottom: 56px;
     }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #a5b4fc;
+      margin-bottom: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #10b981;
+    }
+
     header h1 {
-      font-size: 2.2rem;
-      margin-bottom: 8px;
+      font-size: 2.75rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+      background: linear-gradient(180deg, #ffffff 40%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
+
     header p {
       color: var(--text-muted);
-      font-size: 1.1rem;
+      font-size: 1.15rem;
+      max-width: 520px;
+      margin: 0 auto;
     }
+
+    /* Apps Grid */
     .apps-grid {
       display: grid;
-      gap: 20px;
-      margin-bottom: 48px;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 24px;
+      margin-bottom: 64px;
     }
+
     .app-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 24px;
+      border-radius: 16px;
+      padding: 28px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+      position: relative;
     }
+
+    .app-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-hover);
+      box-shadow: 0 20px 40px -15px var(--glow);
+      background: var(--card-hover);
+    }
+
+    .app-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .app-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .app-meta {
+      flex: 1;
+    }
+
+    .category-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #818cf8;
+      margin-bottom: 4px;
+      display: block;
+    }
+
     .app-title {
-      font-size: 1.25rem;
-      margin-bottom: 8px;
+      font-size: 1.3rem;
+      font-weight: 700;
       color: #fff;
+      line-height: 1.3;
     }
+
     .app-desc {
       color: var(--text-muted);
       font-size: 0.95rem;
-      margin-bottom: 16px;
+      line-height: 1.6;
+      margin-bottom: 24px;
     }
+
+    /* Links & Buttons */
     .app-links {
       display: flex;
+      align-items: center;
       gap: 12px;
       flex-wrap: wrap;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
+
     .btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       text-decoration: none;
       font-size: 0.88rem;
-      padding: 8px 14px;
-      border-radius: 6px;
-      font-weight: 500;
-      transition: opacity 0.2s ease;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
     }
-    .btn:hover {
-      opacity: 0.85;
-    }
+
     .btn-primary {
-      background-color: var(--primary);
+      background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%);
       color: white;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
     }
+
+    .btn-primary:hover {
+      background: linear-gradient(180deg, #60a5fa 0%, #2563eb 100%);
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.45);
+      transform: translateY(-1px);
+    }
+
     .btn-secondary {
-      background-color: transparent;
-      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-muted);
       border: 1px solid var(--border);
     }
-    footer {
-      text-align: center;
-      border-top: 1px solid var(--border);
-      padding-top: 24px;
-      color: var(--text-muted);
-      font-size: 0.88rem;
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-main);
+      border-color: rgba(255, 255, 255, 0.2);
     }
+
+    .btn svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0 16px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
     footer a {
       color: var(--text-muted);
-      text-decoration: underline;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    .divider {
+      color: rgba(255, 255, 255, 0.15);
+    }
+
+    @media (max-width: 640px) {
+      .apps-grid {
+        grid-template-columns: 1fr;
+      }
+      header h1 {
+        font-size: 2.2rem;
+      }
     }
   </style>
 </head>
@@ -108,42 +284,76 @@
 
   <div class="container">
     <header>
+      <div class="badge">
+        <span class="badge-dot"></span> App Development Studio
+      </div>
       <h1>Amrton</h1>
-      <p>Mobile applications, tools, and entertainment.</p>
+      <p>High-quality mobile applications, productivity tools, and interactive experiences.</p>
     </header>
 
     <main class="apps-grid">
       <!-- App 1 Card -->
       <article class="app-card">
         <div>
-          <h2 class="app-title">YtWatchTime Likes Subs </h2>
-          <p class="app-desc">YtWatchTime by Amrton is a video discovery and creator engagement platform designed to help content creators boost watch time, likes, and subscribers naturally.</p>
+          <div class="app-header">
+            <div class="app-icon">▶️</div>
+            <div class="app-meta">
+              <span class="category-tag">Creator Tools</span>
+              <h2 class="app-title">YtWatchTime Likes Subs</h2>
+            </div>
+          </div>
+          <p class="app-desc">
+            A video discovery and creator engagement platform designed to help content creators naturally grow watch time, likes, and genuine community reach.
+          </p>
         </div>
+
         <div class="app-links">
-          <a href="https://play.google.com/store/apps/details?id=com.amrton.YtWatchTimeLikesSubs" class="btn btn-primary" target="_blank" rel="noopener">Google Play</a>
-          <a href="/privacy/ytwatchtimelikessubs.html" class="btn btn-secondary">Privacy Policy</a>
+          <a href="https://play.google.com/store/apps/details?id=com.amrton.YtWatchTimeLikesSubs" class="btn btn-primary" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.03 2.03 0 0 1-.223-.974V2.788c0-.36.08-.7.222-.974zm11.235 11.238l2.298 2.298-11.83 6.83 9.532-9.128zm0-2.104L5.312 1.82 17.142 8.65l-2.298 2.298zm1.096 1.052l3.41-1.97a1.59 1.59 0 0 1 0 2.756l-3.41 1.97-1.464-1.464 1.464-1.292z"/></svg>
+            Google Play
+          </a>
+          <a href="/privacy/ytwatchtimelikessubs.html" class="btn btn-secondary">
+            <svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 5a3 3 0 0 1 6 0v3H9V7zm3 7a2 2 0 0 1 2 2c0 .74-.4 1.38-1 1.72V19a1 1 0 0 1-2 0v-1.28A2 2 0 0 1 12 14z"/></svg>
+            Privacy Policy
+          </a>
         </div>
       </article>
 
       <!-- App 2 Card -->
       <article class="app-card">
         <div>
-          <h2 class="app-title">App Name 2</h2>
-          <p class="app-desc">Short description of your second application or tool.</p>
+          <div class="app-header">
+            <div class="app-icon">⚡</div>
+            <div class="app-meta">
+              <span class="category-tag">Utilities</span>
+              <h2 class="app-title">App Name 2</h2>
+            </div>
+          </div>
+          <p class="app-desc">
+            Short, compelling description of your second application or game explaining core features and benefits for users.
+          </p>
         </div>
+
         <div class="app-links">
-          <a href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME" class="btn btn-primary" target="_blank" rel="noopener">Google Play</a>
-          <a href="/privacy/app2.html" class="btn btn-secondary">Privacy Policy</a>
+          <a href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME" class="btn btn-primary" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.03 2.03 0 0 1-.223-.974V2.788c0-.36.08-.7.222-.974zm11.235 11.238l2.298 2.298-11.83 6.83 9.532-9.128zm0-2.104L5.312 1.82 17.142 8.65l-2.298 2.298zm1.096 1.052l3.41-1.97a1.59 1.59 0 0 1 0 2.756l-3.41 1.97-1.464-1.464 1.464-1.292z"/></svg>
+            Google Play
+          </a>
+          <a href="/privacy/app2.html" class="btn btn-secondary">
+            <svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 5a3 3 0 0 1 6 0v3H9V7zm3 7a2 2 0 0 1 2 2c0 .74-.4 1.38-1 1.72V19a1 1 0 0 1-2 0v-1.28A2 2 0 0 1 12 14z"/></svg>
+            Privacy Policy
+          </a>
         </div>
       </article>
     </main>
 
     <footer>
       <p>&copy; 2026 Amrton. All rights reserved.</p>
-      <p style="margin-top: 6px;">
-        Contact: <a href="mailto:contact@amrton.com">Amrtonofficial@gmail.com</a> &bull; 
+      <div class="footer-links">
+        <a href="mailto:Amrtonofficial@gmail.com">Contact Support</a>
+        <span class="divider">&bull;</span>
         <a href="/app-ads.txt">app-ads.txt</a>
-      </p>
+      </div>
     </footer>
   </div>
 
