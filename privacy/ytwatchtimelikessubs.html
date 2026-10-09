@@ -3,318 +3,314 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - ytWatchTime</title>
+    <title>ytWatchTime Privacy Policy</title>
     <style>
         :root {
-            --primary-color: #1a73e8;
-            --text-main: #202124;
-            --text-secondary: #5f6368;
-            --bg-page: #f8f9fa;
-            --bg-card: #ffffff;
-            --border-color: #dadce0;
-            --note-bg: #e8f0fe;
-            --note-border: #1a73e8;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+            --bg-color: #ffffff;
+            --text-color: #2c3e50;
+            --heading-color: #111827;
+            --accent-red: #d32f2f;
+            --meta-color: #6b7280;
+            --divider-color: #f3f4f6;
+            --card-bg: #f9fafb;
+            --card-border: #e5e7eb;
+            --badge-bg: #fee2e2;
+            --badge-text: #991b1b;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-            background-color: var(--bg-page);
-            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             line-height: 1.65;
-            padding: 24px 16px;
+            margin: 0;
+            padding: 24px 20px 48px 20px;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .container {
-            max-width: 820px;
-            margin: 0 auto;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 40px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        .brand {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--heading-color);
+            margin-bottom: 4px;
+            letter-spacing: -0.2px;
         }
 
-        header {
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 20px;
-            margin-bottom: 28px;
+        .page-title {
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--heading-color);
+            margin: 0 0 10px 0;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
         }
 
-        h1 {
-            font-size: 28px;
-            color: var(--text-main);
-            margin-bottom: 8px;
-        }
-
-        .meta-info {
+        .meta-row {
             font-size: 14px;
-            color: var(--text-secondary);
+            color: var(--meta-color);
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
-        .intro {
+        .meta-date {
+            font-size: 14px;
+            color: var(--meta-color);
+            margin-bottom: 20px;
+        }
+
+        .lead {
             font-size: 15px;
+            line-height: 1.65;
+            color: var(--text-color);
             margin-bottom: 24px;
         }
 
-        section {
-            margin-bottom: 28px;
+        .divider {
+            height: 1px;
+            background-color: var(--divider-color);
+            margin: 24px 0;
         }
 
         h2 {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--text-main);
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--heading-color);
             margin-top: 24px;
             margin-bottom: 12px;
-            border-left: 4px solid var(--primary-color);
-            padding-left: 10px;
+            border-left: 4px solid var(--accent-red);
+            padding-left: 12px;
+            line-height: 1.3;
         }
 
         h3 {
-            font-size: 15px;
-            font-weight: 600;
-            margin-top: 14px;
-            margin-bottom: 6px;
-            color: var(--text-main);
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--heading-color);
+            margin-top: 18px;
+            margin-bottom: 8px;
         }
 
-        p {
-            margin-bottom: 12px;
-            font-size: 14.5px;
+        p, li {
+            font-size: 14px;
+            color: var(--text-color);
         }
 
         ul {
-            list-style-type: disc;
-            margin-left: 24px;
+            padding-left: 20px;
+            margin-top: 6px;
             margin-bottom: 14px;
-            font-size: 14.5px;
         }
 
         li {
             margin-bottom: 6px;
         }
 
-        .callout {
-            background-color: var(--note-bg);
-            border-left: 4px solid var(--note-border);
-            padding: 12px 16px;
-            border-radius: 0 4px 4px 0;
-            font-size: 14px;
-            margin: 12px 0;
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            padding: 16px;
+            margin: 16px 0;
         }
 
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
+        .warning-card {
+            background-color: var(--card-bg);
+            border-left: 4px solid var(--accent-red);
+            border-top: 1px solid var(--card-border);
+            border-right: 1px solid var(--card-border);
+            border-bottom: 1px solid var(--card-border);
+            border-radius: 8px;
+            padding: 16px;
+            margin: 20px 0;
         }
 
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            border-top: 1px solid var(--border-color);
+        .footer {
             margin-top: 40px;
             padding-top: 20px;
-            font-size: 13px;
-            color: var(--text-secondary);
+            border-top: 1px solid var(--card-border);
             text-align: center;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px 16px;
-            }
-
-            h1 {
-                font-size: 24px;
-            }
+            font-size: 12px;
+            color: var(--meta-color);
         }
     </style>
 </head>
 <body>
 
-<main class="container">
-    <header>
-        <h1>ytWatchTime Privacy Policy</h1>
-        <div class="meta-info">
-            <strong>Owner:</strong> Amrton &bull; <strong>Last Updated:</strong> August 29, 2026
-        </div>
-    </header>
+    <div class="brand">ytWatchTime</div>
+    <h1 class="page-title">Privacy Policy</h1>
+    
+    <div class="meta-row">
+        <span>Owner: Amrton &nbsp;&bull;</span>
+    </div>
+    <div class="meta-date">Last Updated: August 29, 2026</div>
 
-    <p class="intro">
-        This Privacy Policy applies exclusively to the <strong>ytWatchTime</strong> mobile application developed and published by <strong>Amrton</strong>. By using the application, you are deemed to have accepted the terms of this policy.
+    <p class="lead">
+        This Privacy Policy applies exclusively to the <strong>ytWatchTime</strong> mobile application developed and published by Amrton. By using the application, you are deemed to have accepted the terms of this policy.
     </p>
 
-    <section>
-        <h2>1. Purpose of the Policy</h2>
-        <p>This policy explains how personal, device, and security-signal data collected during the use of the ytWatchTime application is securely processed, stored, used, and, when necessary, shared in accordance with legal regulations.</p>
-    </section>
+    <div class="divider"></div>
 
-    <section>
-        <h2>2. Data Collected</h2>
-        
-        <h3>2.1. Device and System Data</h3>
-        <ul>
-            <li>Device name, brand, model, and hardware identifiers</li>
-            <li>Android OS version &amp; build information (<code>PRODUCT</code>, <code>MANUFACTURER</code>, <code>BRAND</code>, <code>DEVICE</code>, <code>MODEL</code>, <code>HARDWARE</code>, <code>FINGERPRINT</code>)</li>
-            <li>Hardware ID (HWID), Android ID, MAC address</li>
-            <li>OpenGL renderer and graphics runtime information</li>
-            <li>App version, build numbers, and execution session logs</li>
-            <li>IP address, network provider, and network connection status</li>
-        </ul>
+    <h2>1. Purpose of the Policy</h2>
+    <p>
+        This policy explains how personal, device, and security-signal data collected during the use of the ytWatchTime application is securely processed, stored, used, and, when necessary, shared in accordance with legal regulations.
+    </p>
 
-        <h3>2.2. User Account Data</h3>
-        <ul>
-            <li>Email address used for Google Sign-In authentication</li>
-            <li>Name, display name, and profile photo provided by Google Account</li>
-            <li>YouTube channel name and channel ID associated with the account</li>
-            <li>Videos watched, likes completed, subscriptions verified, and completed tasks</li>
-        </ul>
+    <div class="divider"></div>
 
-        <h3>2.3. App Usage Data</h3>
-        <ul>
-            <li>Task completion history, earned points/coins transaction logs</li>
-            <li>In-app purchases and subscriptions processed via Google Play Billing</li>
-            <li>App navigation, behavior logs, and feature interaction metrics</li>
-            <li>Notification interaction logs and usage duration</li>
-            <li>Firebase Analytics, Crashlytics diagnostics, and Messaging delivery logs</li>
-        </ul>
+    <h2>2. Data Collected</h2>
 
-        <h3>2.4. Security Signals &amp; Device Integrity Data</h3>
+    <h3>2.1. Device and System Data</h3>
+    <ul>
+        <li>Device name, brand, model, and hardware identifiers</li>
+        <li>Android OS version & build information (PRODUCT, MANUFACTURER, BRAND, DEVICE, MODEL, HARDWARE, FINGERPRINT)</li>
+        <li>Hardware ID (HWID), Android ID, MAC address</li>
+        <li>OpenGL renderer and graphics runtime information</li>
+        <li>App version, build numbers, and execution session logs</li>
+        <li>IP address, network provider, and network connection status</li>
+    </ul>
+
+    <h3>2.2. User Account Data</h3>
+    <ul>
+        <li>Email address used for Google Sign-In authentication</li>
+        <li>Name, display name, and profile photo provided by Google Account</li>
+        <li>YouTube channel name and channel ID associated with the account</li>
+        <li>Videos watched, likes completed, subscriptions verified, and completed tasks</li>
+    </ul>
+
+    <h3>2.3. App Usage Data</h3>
+    <ul>
+        <li>Task completion history, earned points/coins transaction logs</li>
+        <li>In-app purchases and subscriptions processed via Google Play Billing</li>
+        <li>App navigation, behavior logs, and feature interaction metrics</li>
+        <li>Notification interaction logs and usage duration</li>
+        <li>Firebase Analytics, Crashlytics diagnostics, and Messaging delivery logs</li>
+    </ul>
+
+    <div class="card">
+        <h3>2.4. Security Signals & Device Integrity Data</h3>
         <p>Collected to detect abuse, prevent multi-account farming, and ensure fair service operation:</p>
         <ul>
             <li><strong>Network Indicators:</strong> VPN active status, proxy usage, transport type (Wi-Fi, Cellular, Ethernet, VPN, Bluetooth), network interface summaries</li>
             <li><strong>Tethering Indicators:</strong> USB tethering status, Bluetooth tethering, PC connection likelihood</li>
-            <li><strong>Root &amp; Emulation Signals:</strong> Rooted device binaries (<code>su</code>, Magisk), emulator execution score, build tags/props summary</li>
-            <li><strong>System &amp; Debug Signals:</strong> ADB enabled flag, ADB over TCP, app debuggable status</li>
+            <li><strong>Root & Emulation Signals:</strong> Rooted device binaries (su, Magisk), emulator execution score, build tags/props summary</li>
+            <li><strong>System & Debug Signals:</strong> ADB enabled flag, ADB over TCP, app debuggable status</li>
             <li><strong>Accessibility Risk Analysis:</strong> Detection of suspicious accessibility services (e.g., auto-clicker, macro, or automation tools)</li>
-            <li><strong>Graphics &amp; Runtime:</strong> GL renderer string and GPU fingerprinting</li>
-            <li><strong>Summaries &amp; Hashes:</strong> Build integrity summary, hardware signature, hashed Android ID</li>
+            <li><strong>Graphics & Runtime:</strong> GL renderer string and GPU fingerprinting</li>
+            <li><strong>Summaries & Hashes:</strong> Build integrity summary, hardware signature, hashed Android ID</li>
         </ul>
+        <p><em>Note: Only boolean, score, and summary values are collected. No personal messages, keystrokes, or unrelated device content are accessed or stored.</em></p>
+    </div>
 
-        <div class="callout">
-            <strong>Note:</strong> Only boolean, score, and summary values are collected. No personal messages, keystrokes, or unrelated device content are accessed or stored.
-        </div>
+    <h3>2.5. Optional Data (with user permission)</h3>
+    <ul>
+        <li>Push Notification permission for campaign status alerts and reward notifications</li>
+    </ul>
 
-        <h3>2.5. Optional Data (with user permission)</h3>
-        <ul>
-            <li>Push Notification permission for campaign status alerts and reward notifications</li>
-        </ul>
-    </section>
+    <div class="divider"></div>
 
-    <section>
-        <h2>3. Purposes of Data Use</h2>
-        <ul>
-            <li>Improving application performance, responsiveness, and user experience</li>
-            <li>Operating the voluntary task system and calculating reward distribution fairly</li>
-            <li>Detecting, preventing, and mitigating fraudulent activity (multi-account farming, automated bots, emulator misuse, VPN location spoofing)</li>
-            <li>Authenticating users securely via Google Sign-In</li>
-            <li>Displaying relevant community channels and content</li>
-            <li>Promoting user channels and videos strictly within YouTube's Community Guidelines</li>
-            <li>Error tracking, crash diagnostics, and application security maintenance</li>
-            <li>Processing billing transactions and point store purchases</li>
-        </ul>
-    </section>
+    <h2>3. Purposes of Data Use</h2>
+    <ul>
+        <li>Improving application performance, responsiveness, and user experience</li>
+        <li>Operating the voluntary task system and calculating reward distribution fairly</li>
+        <li>Detecting, preventing, and mitigating fraudulent activity (multi-account farming, automated bots, emulator misuse, VPN location spoofing)</li>
+        <li>Authenticating users securely via Google Sign-In</li>
+        <li>Displaying relevant community channels and content</li>
+        <li>Promoting user channels and videos strictly within YouTube's Community Guidelines</li>
+        <li>Error tracking, crash diagnostics, and application security maintenance</li>
+        <li>Processing billing transactions and point store purchases</li>
+    </ul>
 
-    <section>
-        <h2>4. Third-Party Services</h2>
-        <p>ytWatchTime integrates the following trusted external services:</p>
-        <ul>
-            <li><strong>Google Firebase:</strong> Auth, Crashlytics, Messaging, and Realtime/Firestore Analytics</li>
-            <li><strong>Google Sign-In &amp; Credential Manager:</strong> Secure user authentication</li>
-            <li><strong>AdMob &amp; Ad Services:</strong> Ad delivery and frequency management</li>
-            <li><strong>Google Play Billing:</strong> In-app purchases and point store transactions</li>
-        </ul>
-        <p>No personal data is sold or shared with external parties for commercial marketing outside the core service operational scope.</p>
-    </section>
+    <div class="divider"></div>
 
-    <section>
+    <h2>4. Third-Party Services</h2>
+    <p>ytWatchTime integrates the following trusted external services:</p>
+    <ul>
+        <li><strong>Google Firebase:</strong> Auth, Crashlytics, Messaging, and Realtime/Firestore Analytics</li>
+        <li><strong>Google Sign-In & Credential Manager:</strong> Secure user authentication</li>
+        <li><strong>AdMob & Ad Services:</strong> Ad delivery and frequency management</li>
+        <li><strong>Google Play Billing:</strong> In-app purchases and point store transactions</li>
+    </ul>
+    <p>No personal data is sold or shared with external parties for commercial marketing outside the core service operational scope.</p>
+
+    <div class="warning-card">
         <h2>5. Anti-Fraud, Multi-Account, and Misuse Policy</h2>
         <ul>
             <li><strong>Multi-Account Limit:</strong> Users creating more than 3 accounts from the same device or network IP, or engaging in automated phone farming, may be permanently banned.</li>
-            <li><strong>Emulators &amp; Modified APKs:</strong> Running the application on emulators, virtual devices, or modified/tampered APKs is strictly prohibited.</li>
-            <li><strong>VPN &amp; Proxy Restriction:</strong> Using VPN or proxy networks to manipulate location or bypass limits is restricted.</li>
-            <li><strong>Bots &amp; Auto-Clickers:</strong> Automatic clicking, macro scripts, or background task bots will result in immediate account termination.</li>
-            <li><strong>Coin &amp; Task Abuse:</strong> Abusing the points or campaign system will lead to account suspension and forfeiture of earned points.</li>
+            <li><strong>Emulators & Modified APKs:</strong> Running the application on emulators, virtual devices, or modified/tampered APKs is strictly prohibited.</li>
+            <li><strong>VPN & Proxy Restriction:</strong> Using VPN or proxy networks to manipulate location or bypass limits is restricted.</li>
+            <li><strong>Bots & Auto-Clickers:</strong> Automatic clicking, macro scripts, or background task bots will result in immediate account termination.</li>
+            <li><strong>Coin & Task Abuse:</strong> Abusing the points or campaign system will lead to account suspension and forfeiture of earned points.</li>
             <li><strong>Automated Decisions:</strong> Security integrity signals may automatically trigger temporary or permanent account/device suspensions. Users may request human review (see Section 10).</li>
         </ul>
-    </section>
+    </div>
 
-    <section>
-        <h2>6. Data Storage and Security</h2>
-        <p>All user data is transmitted over encrypted HTTPS/TLS channels and stored on secure server infrastructure. Firebase logs are restricted strictly to system diagnosis and performance optimizations. Regular security audits are conducted to prevent unauthorized access.</p>
-    </section>
+    <div class="divider"></div>
 
-    <section>
-        <h2>7. WebView, Cookies &amp; Embedded Content</h2>
-        <p>The application uses an embedded Android WebView to render third-party content (e.g., YouTube) for task verification. Within WebView:</p>
-        <ul>
-            <li><strong>Cookies:</strong> First-party and third-party cookies are supported to enable video playback and session state.</li>
-            <li><strong>JavaScript:</strong> JavaScript is enabled for page rendering and minimal verification scripts (e.g., checking voluntary like/subscribe state). Passwords, payment details, or personal messages are NEVER read or captured.</li>
-            <li><strong>Third-Party Content:</strong> Interacting with third-party sites inside WebView is subject to those respective sites' privacy policies and terms of service.</li>
-        </ul>
-    </section>
+    <h2>6. Data Storage and Security</h2>
+    <p>All user data is transmitted over encrypted HTTPS/TLS channels and stored on secure server infrastructure. Firebase logs are restricted strictly to system diagnosis and performance optimizations. Regular security audits are conducted to prevent unauthorized access.</p>
 
-    <section>
-        <h2>8. International Data Transfers</h2>
-        <p>Data may be processed on secure cloud infrastructure located outside your home jurisdiction (e.g., Google Firebase servers). All transfers strictly comply with international data protection standards and Standard Contractual Clauses.</p>
-    </section>
+    <div class="divider"></div>
 
-    <section>
-        <h2>9. Legal Sharing and Disclosures</h2>
-        <p>User information will only be shared with law enforcement or legal authorities if required by valid court order, legal statute, or to investigate severe security violations and fraud.</p>
-    </section>
+    <h2>7. WebView, Cookies & Embedded Content</h2>
+    <p>The application uses an embedded Android WebView to render third-party content (e.g., YouTube) for task verification. Within WebView:</p>
+    <ul>
+        <li><strong>Cookies:</strong> First-party and third-party cookies are supported to enable video playback and session state.</li>
+        <li><strong>JavaScript:</strong> JavaScript is enabled for page rendering and minimal verification scripts (e.g., checking voluntary like/subscribe state). Passwords, payment details, or personal messages are NEVER read or captured.</li>
+        <li><strong>Third-Party Content:</strong> Interacting with third-party sites inside WebView is subject to those respective sites' privacy policies and terms of service.</li>
+    </ul>
 
-    <section>
-        <h2>10. User Rights &amp; Appeal Process</h2>
-        <p>Under GDPR, CCPA, and global data privacy standards, you have the right to:</p>
-        <ul>
-            <li>Access a copy of your personal data</li>
-            <li>Request data correction or complete account deletion</li>
-            <li>Withdraw consent for optional permissions</li>
-            <li>Request human review of automated fraud suspensions</li>
-        </ul>
-        <p><strong>Appeal Process:</strong> If your account or device is flagged or suspended by security checks, you may request human review by emailing <a href="mailto:amrtonofficial@gmail.com?subject=Appeal%20%E2%80%93%20Security%20Decision">amrtonofficial@gmail.com</a> with the subject <em>"Appeal – Security Decision"</em> along with relevant account details.</p>
-    </section>
+    <div class="divider"></div>
 
-    <section>
-        <h2>11. Policy Updates</h2>
-        <p>We reserve the right to update this Privacy Policy at any time. Updated versions become effective immediately upon being published inside the app.</p>
-    </section>
+    <h2>8. International Data Transfers</h2>
+    <p>Data may be processed on secure cloud infrastructure located outside your home jurisdiction (e.g., Google Firebase servers). All transfers strictly comply with international data protection standards and Standard Contractual Clauses.</p>
 
-    <section>
-        <h2>12. Children's Privacy</h2>
-        <p>ytWatchTime is not intended for children under the age of 13. We do not knowingly collect personal information from minors under 13.</p>
-    </section>
+    <div class="divider"></div>
 
-    <section>
-        <h2>13. Data Retention</h2>
-        <p>User account and security log data are retained as long as the service remains operational, or as required by law for fraud prevention and legal compliance.</p>
-    </section>
+    <h2>9. Legal Sharing and Disclosures</h2>
+    <p>User information will only be shared with law enforcement or legal authorities if required by valid court order, legal statute, or to investigate severe security violations and fraud.</p>
 
-    <section>
-        <h2>14. Legal Bases for Processing (GDPR)</h2>
-        <p>Processing is based on contractual necessity (operating tasks and points), legitimate interests (security and fraud detection), consent (push notifications), and legal compliance.</p>
-    </section>
+    <div class="divider"></div>
 
-    <section>
-        <h2>15. California Privacy Rights (CCPA/CPRA)</h2>
-        <p>California residents may exercise access, deletion, and opt-out rights by contacting us via email. We do not sell user personal information.</p>
-    </section>
+    <h2>10. User Rights & Appeal Process</h2>
+    <p>Under GDPR, CCPA, and global data privacy standards, you have the right to:</p>
+    <ul>
+        <li>Access a copy of your personal data</li>
+        <li>Request data correction or complete account deletion</li>
+        <li>Withdraw consent for optional permissions</li>
+        <li>Request human review of automated fraud suspensions</li>
+    </ul>
+    <p><strong>Appeal Process:</strong> If your account or device is flagged or suspended by security checks, you may request human review by emailing <strong>Support@Amrton.com</strong> with the subject <em>"Appeal – Security Decision"</em> along with relevant account details.</p>
 
-    <footer>
-        <p>&copy; 2026 Amrton. All rights reserved.</p>
-    </footer>
-</main>
+    <div class="divider"></div>
+
+    <h2>11. Policy Updates</h2>
+    <p>We reserve the right to update this Privacy Policy at any time. Updated versions become effective immediately upon being published inside the app.</p>
+
+    <div class="divider"></div>
+
+    <h2>12. Children's Privacy</h2>
+    <p>ytWatchTime is not intended for children under the age of 13. We do not knowingly collect personal information from minors under 13.</p>
+
+    <div class="divider"></div>
+
+    <h2>13. Data Retention</h2>
+    <p>User account and security log data are retained as long as the service remains operational, or as required by law for fraud prevention and legal compliance.</p>
+
+    <div class="divider"></div>
+
+    <h2>14. Legal Bases for Processing (GDPR)</h2>
+    <p>Processing is based on contractual necessity (operating tasks and points), legitimate interests (security and fraud detection), consent (push notifications), and legal compliance.</p>
+
+    <div class="divider"></div>
+
+    <h2>15. California Privacy Rights (CCPA/CPRA)</h2>
+    <p>California residents may exercise access, deletion, and opt-out rights by contacting us via email. We do not sell user personal information.</p>
+
+    <div class="footer">
+        &copy; 2026 Amrton. All rights reserved.
+    </div>
 
 </body>
 </html>
-
-
