@@ -3,97 +3,531 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - AI Pixel Repair by Amrton</title>
+    <meta name="description" content="Industrial-grade Privacy Policy for AI Pixel Repair by Amrton. Detailing data protection, AdMob advertising, local diagnostic processing, and health safety.">
+    <meta name="author" content="Amrton">
+    <title>Privacy Policy - AI Pixel Repair | Amrton</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0f172a;
-            color: #f8fafc;
-            line-height: 1.6;
+        :root {
+            --bg-primary: #0f172a;
+            --bg-card: #1e293b;
+            --bg-sidebar: #182232;
+            --border-color: #334155;
+            --accent-cyan: #38bdf8;
+            --accent-green: #10b981;
+            --accent-amber: #f59e0b;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg-primary: #f8fafc;
+                --bg-card: #ffffff;
+                --bg-sidebar: #f1f5f9;
+                --border-color: #e2e8f0;
+                --accent-cyan: #0284c7;
+                --accent-green: #059669;
+                --accent-amber: #d97706;
+                --text-primary: #0f172a;
+                --text-secondary: #334155;
+                --text-muted: #64748b;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 24px;
+            padding: 0;
         }
-        .container {
-            max-width: 800px;
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Top Header Bar */
+        .app-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            backdrop-filter: blur(10px);
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-badge {
+            background-color: var(--accent-cyan);
+            color: #000;
+            font-weight: 800;
+            font-size: 11px;
+            padding: 4px 8px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .last-updated {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Responsive Layout Grid */
+        .page-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            max-width: 1400px;
             margin: 0 auto;
-            background-color: #1e293b;
-            padding: 32px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-            border: 1px solid #334155;
+            padding: 24px;
+            gap: 32px;
         }
-        h1 {
-            color: #38bdf8;
-            font-size: 28px;
-            margin-top: 0;
-            border-bottom: 2px solid #334155;
-            padding-bottom: 12px;
+
+        @media (min-width: 992px) {
+            .page-layout {
+                grid-template-columns: 280px 1fr;
+                padding: 32px;
+            }
         }
-        h2 {
-            color: #06b6d4;
-            font-size: 20px;
-            margin-top: 24px;
+
+        /* Sidebar Navigation Table of Contents (PC View) */
+        .sidebar {
+            position: relative;
         }
-        p, li {
-            color: #cbd5e1;
-            font-size: 15px;
+
+        @media (min-width: 992px) {
+            .sidebar-inner {
+                position: sticky;
+                top: 90px;
+                background-color: var(--bg-sidebar);
+                border: 1px solid var(--border-color);
+                border-radius: 16px;
+                padding: 20px;
+                max-height: calc(100vh - 120px);
+                overflow-y: auto;
+            }
         }
-        ul {
-            padding-left: 20px;
-        }
-        .footer {
-            margin-top: 40px;
-            padding-top: 16px;
-            border-top: 1px solid #334155;
+
+        .nav-title {
             font-size: 13px;
-            color: #94a3b8;
-            text-align: center;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--accent-cyan);
+            margin-bottom: 12px;
         }
-        a {
-            color: #38bdf8;
+
+        .toc-list {
+            list-style: none;
+        }
+
+        .toc-list li {
+            margin-bottom: 8px;
+        }
+
+        .toc-list a {
+            color: var(--text-secondary);
             text-decoration: none;
+            font-size: 13px;
+            display: block;
+            padding: 6px 10px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
         }
+
+        .toc-list a:hover {
+            background-color: var(--border-color);
+            color: var(--accent-cyan);
+        }
+
+        /* Search Filter Input */
+        .search-box {
+            margin-bottom: 16px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-card);
+            color: var(--text-primary);
+            font-size: 13px;
+        }
+
+        /* Main Content Container */
+        .content-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        @media (min-width: 768px) {
+            .content-card {
+                padding: 40px;
+            }
+        }
+
+        .section-block {
+            margin-bottom: 40px;
+            scroll-margin-top: 100px;
+        }
+
+        .section-block:last-child {
+            margin-bottom: 0;
+        }
+
+        h1.main-heading {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        p.lead-text {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        h2.section-heading {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--accent-cyan);
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p, li {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+        }
+
+        ul, ol {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        /* Industrial Telemetry Grid Card */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        @media (min-width: 600px) {
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .info-card {
+            background-color: var(--bg-sidebar);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .info-card-title {
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            margin-bottom: 6px;
+        }
+
+        .info-card-value {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-primary);
+            word-break: break-all;
+        }
+
+        /* Code/Identifier Box */
+        .code-box {
+            background-color: var(--bg-sidebar);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-family: monospace;
+            font-size: 13px;
+            color: var(--accent-cyan);
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+
+        /* Callout Banners */
+        .callout-box {
+            background-color: rgba(56, 189, 248, 0.08);
+            border-left: 4px solid var(--accent-cyan);
+            border-radius: 0 12px 12px 0;
+            padding: 16px 20px;
+            margin: 20px 0;
+        }
+
+        .callout-warning {
+            background-color: rgba(245, 158, 11, 0.08);
+            border-left-color: var(--accent-amber);
+        }
+
+        .callout-title {
+            font-weight: 800;
+            font-size: 14px;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
         a:hover {
             text-decoration: underline;
+        }
+
+        /* Footer */
+        .page-footer {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Print Media Styles */
+        @media print {
+            .app-header, .sidebar { display: none; }
+            .page-layout { grid-template-columns: 1fr; padding: 0; }
+            .content-card { border: none; box-shadow: none; padding: 0; }
+            body { background: #fff; color: #000; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Privacy Policy</h1>
-        <p><strong>Effective Date:</strong> October 15, 2026</p>
-        <p><strong>Application:</strong> AI Pixel Repair</p>
-        <p><strong>Developer:</strong> Amrton</p>
 
-        <h2>1. Overview</h2>
-        <p>AI Pixel Repair ("the App"), developed by Amrton, is committed to protecting your privacy. This Privacy Policy explains our practices regarding data collection, usage, and security when you use our screen diagnostic and pixel restoration application.</p>
-
-        <h2>2. Data Collection and Usage</h2>
-        <p><strong>No Personal Data Collected:</strong> AI Pixel Repair does not require user accounts, logins, or personal registration. We do not collect, transmit, store, or sell any personal data, user identifiers, contact information, location data, or device identifiers.</p>
-
-        <h2>3. Local Device Processing</h2>
-        <p>All screen diagnostic sweeps, subpixel excitation patterns, calibration calculations, and session duration logs operate 100% locally on your device. No diagnostic data or screen metrics leave your phone.</p>
-
-        <h2>4. Permissions</h2>
-        <p>The App requests standard Android runtime flags strictly required for core functionality:</p>
-        <ul>
-            <li><strong>Keep Screen Awake:</strong> Prevents display timeout during active pixel repair cycles.</li>
-            <li><strong>Screen Brightness Control:</strong> Boosts screen luminance to maximum during diagnostic runs for peak subpixel stimulation.</li>
-            <li><strong>Vibration & Audio Alerts:</strong> Provides haptic/audio notifications upon session completion.</li>
-        </ul>
-
-        <h2>5. Health & Safety Disclaimer</h2>
-        <p>The App generates high-frequency subpixel flashing and color sequences. Users should refrain from looking directly at the display during active restoration sessions to prevent visual fatigue, eye strain, or temporary blurry vision.</p>
-
-        <h2>6. Contact Us</h2>
-        <p>If you have any questions, feedback, or concerns regarding this Privacy Policy, please contact Amrton support at:</p>
-        <p><strong>Email:</strong> <a href="mailto:Support@amrton.com">Support@amrton.com</a></p>
-        <p><strong>Official Web:</strong> <a href="https://apps.amrton.com/privacy/aipixelrepair.html" target="_blank">https://apps.amrton.com/privacy/aipixelrepair.html</a></p>
-
-        <div class="footer">
-            &copy; 2026 Amrton. All rights reserved.
+    <!-- App Bar Navigation -->
+    <header class="app-header">
+        <div class="brand-container">
+            <span class="brand-badge">Enterprise</span>
+            <span class="brand-title">AI Pixel Repair</span>
         </div>
+        <span class="last-updated">Last Revised: October 15, 2026</span>
+    </header>
+
+    <!-- Main Page Layout -->
+    <div class="page-layout">
+        
+        <!-- Sidebar Navigation (Responsive) -->
+        <aside class="sidebar">
+            <div class="sidebar-inner">
+                <div class="nav-title">Navigation</div>
+                <div class="search-box">
+                    <input type="text" id="secSearch" class="search-input" placeholder="Search policy..." onkeyup="filterSections()">
+                </div>
+                <ul class="toc-list" id="tocList">
+                    <li><a href="#sec-overview">1. Overview & Entity</a></li>
+                    <li><a href="#sec-data-collection">2. Zero Personal Data</a></li>
+                    <li><a href="#sec-admob">3. Google AdMob Ads</a></li>
+                    <li><a href="#sec-local-processing">4. On-Device Processing</a></li>
+                    <li><a href="#sec-permissions">5. Android Permissions</a></li>
+                    <li><a href="#sec-health-safety">6. Health & Visual Safety</a></li>
+                    <li><a href="#sec-gdpr-ccpa">7. GDPR & CCPA Rights</a></li>
+                    <li><a href="#sec-children">8. COPPA Compliance</a></li>
+                    <li><a href="#sec-contact">9. Support Contact</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content-card">
+
+            <!-- Title & Intro -->
+            <div class="section-block" id="sec-overview">
+                <h1 class="main-heading">Industrial Privacy & Data Protection Statement</h1>
+                <p class="lead-text">Official Privacy Policy for AI Pixel Repair, engineered by Amrton. Providing total transparency on data handling, advertising disclosure, on-device diagnostic operations, and visual health safety.</p>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-card-title">Application Name</div>
+                        <div class="info-card-value">AI Pixel Repair</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-title">Developer & Publisher</div>
+                        <div class="info-card-value">Amrton</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-title">Official Contact Email</div>
+                        <div class="info-card-value">Support@amrton.com</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-title">Canonical Policy URL</div>
+                        <div class="info-card-value">https://apps.amrton.com/privacy/aipixelrepair.html</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Zero Data Collection -->
+            <div class="section-block" id="sec-data-collection">
+                <h2 class="section-heading">2. Zero Personal Data Tracking</h2>
+                <p>AI Pixel Repair operates under a strict privacy-first architecture. We do not require account registration, social login, or personal profile creation. We do not collect, store, transmit, or monetize any of the following:</p>
+                <ul>
+                    <li>Personal Identifiable Information (PII) such as name, email address, phone number, or physical address.</li>
+                    <li>Location Data or GPS tracking coordinates.</li>
+                    <li>Contact lists, SMS messages, or private media files.</li>
+                    <li>Biometric data, sensor logs, or personal usage history.</li>
+                </ul>
+            </div>
+
+            <!-- Section 3: AdMob Advertising Disclosure -->
+            <div class="section-block" id="sec-admob">
+                <h2 class="section-heading">3. Google AdMob Advertising Disclosure</h2>
+                <p>AI Pixel Repair integrates Google AdMob (provided by Google LLC and Google Ireland Limited) to serve banner, interstitial, and native advertisements. This enables us to offer screen calibration and diagnostic tools free of charge.</p>
+
+                <div class="callout-box">
+                    <div class="callout-title">Google AdMob Configuration Details</div>
+                    <p style="margin-bottom: 0;">Our application uses official Google AdMob advertising SDKs configured with the following parameters:</p>
+                </div>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-card-title">AdMob Application ID</div>
+                        <div class="code-box">ca-app-pub-7456038566597000~7200531182</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-title">Banner Ad Unit ID</div>
+                        <div class="code-box">ca-app-pub-7456038566597000/4303649962</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-title">Interstitial Ad Unit ID</div>
+                        <div class="code-box">ca-app-pub-7456038566597000/3840615531</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-title">Native Advanced Ad Unit ID</div>
+                        <div class="code-box">ca-app-pub-7456038566597000/1757377676</div>
+                    </div>
+                </div>
+
+                <p><strong>Identifiers Collected by AdMob:</strong> Google AdMob may collect and process device identifiers, including the Google Advertising ID (GAID), IP address, network carrier details, and crash logs to serve contextual or personalized advertisements, prevent fraud, and measure ad performance.</p>
+
+                <p><strong>Opting Out of Personalized Ads:</strong> You can reset or disable your Google Advertising ID on your Android device at any time by navigating to:</p>
+                <div class="code-box">Settings &gt; Google &gt; Ads &gt; Delete Advertising ID or Reset Advertising ID</div>
+                <p>For more information on how Google manages advertising data, please review the <a href="https://policies.google.com/technologies/ads" target="_blank">Google Advertising Privacy Policy</a>.</p>
+            </div>
+
+            <!-- Section 4: On-Device Processing -->
+            <div class="section-block" id="sec-local-processing">
+                <h2 class="section-heading">4. 100% On-Device Processing</h2>
+                <p>All screen repair protocols (Subpixel Shock, Quantum Matrix Noise, Raster Wave Sweeping, Max Voltage Inversion, Harmonic Frequency Chirp, and Molecular Stabilization) execute entirely on-device using local GPU/CPU hardware rendering and local timer loops. No display telemetry or calibration data is uploaded to remote servers.</p>
+            </div>
+
+            <!-- Section 5: Android Permissions -->
+            <div class="section-block" id="sec-permissions">
+                <h2 class="section-heading">5. Android Runtime Permissions</h2>
+                <p>The application requests standard Android system permissions strictly necessary for display excitation operations:</p>
+                <ul>
+                    <li><code>WAKE_LOCK</code>: Keeps the screen awake during active auto-stop repair cycles so the display panel stays illuminated.</li>
+                    <li><code>VIBRATE</code>: Triggers a completion haptic pulse when an automated repair timer finishes.</li>
+                    <li><code>INTERNET</code> &amp; <code>ACCESS_NETWORK_STATE</code>: Required to fetch AdMob advertisements and check network connectivity status.</li>
+                </ul>
+            </div>
+
+            <!-- Section 6: Health & Visual Safety -->
+            <div class="section-block" id="sec-health-safety">
+                <h2 class="section-heading">6. Visual Safety & Health Disclaimer</h2>
+                <div class="callout-box callout-warning">
+                    <div class="callout-title">Photosensitivity & Visual Fatigue Warning</div>
+                    <p style="margin-bottom: 0;">AI Pixel Repair emits rapid subpixel chromatic flashing and high-frequency color transitions designed to excite stuck display subpixels. Users are advised <strong>not to look directly at the screen</strong> during an active repair session. Staring directly at high-frequency flashing patterns may cause visual fatigue, eye strain, or temporary blurry vision. Place your phone face down while repair is in progress.</p>
+                </div>
+            </div>
+
+            <!-- Section 7: GDPR & CCPA Compliance -->
+            <div class="section-block" id="sec-gdpr-ccpa">
+                <h2 class="section-heading">7. International Regulatory Compliance (GDPR & CCPA)</h2>
+                <p><strong>GDPR / EU ePrivacy Compliance:</strong> If you reside in the European Economic Area (EEA) or UK, you have the right to request access, rectification, erasure, or restriction of any data processed by ad network providers. You may withdraw consent for personalized advertising at any time in device settings.</p>
+
+                <p><strong>CCPA / CPRA Notice (California Residents):</strong> We do not sell personal information. AdMob advertising partners process mobile advertising IDs pursuant to user consent and service provider agreements.</p>
+            </div>
+
+            <!-- Section 8: Children's Privacy -->
+            <div class="section-block" id="sec-children">
+                <h2 class="section-heading">8. Children's Online Privacy Protection (COPPA)</h2>
+                <p>AI Pixel Repair is not directed toward children under the age of 13 (or 16 in the European Union). We do not knowingly collect or solicit personal data from children.</p>
+            </div>
+
+            <!-- Section 9: Support & Inquiries -->
+            <div class="section-block" id="sec-contact">
+                <h2 class="section-heading">9. Developer & Support Contact</h2>
+                <p>If you have any questions, inquiries, or feedback regarding this Privacy Policy or data security, please contact Amrton support:</p>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-card-title">Developer Entity</div>
+                        <div class="info-card-value">Amrton</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-title">Support Email</div>
+                        <div class="info-card-value"><a href="mailto:Support@amrton.com">Support@amrton.com</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="page-footer">
+                <p>&copy; 2026 Amrton. All rights reserved. | <a href="https://apps.amrton.com/privacy/aipixelrepair.html" target="_blank">https://apps.amrton.com/privacy/aipixelrepair.html</a></p>
+            </footer>
+
+        </main>
     </div>
+
+    <!-- Interactive Navigation Script -->
+    <script>
+        function filterSections() {
+            var input = document.getElementById('secSearch');
+            var filter = input.value.toLowerCase();
+            var ul = document.getElementById('tocList');
+            var li = ul.getElementsByTagName('li');
+
+            for (var i = 0; i < li.length; i++) {
+                var a = li[i].getElementsByTagName('a')[0];
+                var txtValue = a.textContent || a.innerText;
+                if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
 </body>
 </html>
-
