@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Privacy Policy - Infinity MultiView Browser | Amrton</title>
+    <meta name="description" content="Official Privacy Policy for Infinity MultiView Browser developed by Amrton. Learn how your data and privacy are protected.">
+    <meta name="author" content="Amrton">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00838f;
+            --primary-dark: #005662;
+            --primary-light: #4fb3bf;
+            --accent: #00b0ff;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --surface-subtle: #f1f5f9;
+            --text-main: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --border-highlight: #cbd5e1;
+            --tag-bg: #e0f2fe;
+            --tag-text: #0369a1;
+            --success: #10b981;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #26c6da;
+                --primary-dark: #00838f;
+                --primary-light: #80deea;
+                --accent: #38bdf8;
+                --bg: #090d16;
+                --surface: #111827;
+                --surface-subtle: #1e293b;
+                --text-main: #f8fafc;
+                --text-secondary: #cbd5e1;
+                --text-muted: #94a3b8;
+                --border: #1e293b;
+                --border-highlight: #334155;
+                --tag-bg: rgba(38, 198, 218, 0.15);
+                --tag-text: #80deea;
+                --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+                --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+                --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Top Navigation Header */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(var(--surface), 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
+            background-color: var(--surface);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .brand-logo {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, var(--primary) 0%, #00acc1 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(0, 131, 143, 0.3);
+        }
+
+        .brand-info h1 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .brand-info p {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background-color: rgba(16, 185, 129, 0.12);
+            color: var(--success);
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            background-color: var(--success);
+            border-radius: 50%;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 4rem 1.5rem 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 840px;
+            margin: 0 auto;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 0.35rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-title {
+            font-size: 2.75rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .metadata-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .metadata-item {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            padding: 0.75rem 1.25rem;
+            border-radius: var(--radius-md);
+            font-size: 0.85rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .metadata-label {
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-right: 0.4rem;
+        }
+
+        .metadata-value {
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        /* Content Layout */
+        .main-wrapper {
+            max-width: 1200px;
+            margin: 2.5rem auto 5rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            position: sticky;
+            top: 5rem;
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .sidebar-title {
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+            background-color: var(--surface-subtle);
+            padding-left: 1rem;
+        }
+
+        /* Main Policy Body */
+        .policy-content {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 3rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .section-block {
+            margin-bottom: 3.5rem;
+            scroll-margin-top: 6rem;
+        }
+
+        .section-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .section-number {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--surface-subtle);
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 0.2rem 0.5rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-highlight);
+        }
+
+        .section-title {
+            font-size: 1.45rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
+        }
+
+        .policy-text {
+            color: var(--text-secondary);
+            font-size: 0.975rem;
+            line-height: 1.75;
+            margin-bottom: 1.25rem;
+        }
+
+        .highlight-box {
+            background-color: var(--surface-subtle);
+            border-left: 4px solid var(--primary);
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box p {
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 0.85rem 1.25rem;
+            border: 1px solid var(--border);
+            text-align: left;
+        }
+
+        .data-table th {
+            background-color: var(--surface-subtle);
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        .data-table td {
+            color: var(--text-secondary);
+        }
+
+        .data-table tr:nth-child(even) td {
+            background-color: rgba(var(--surface-subtle), 0.5);
+        }
+
+        .policy-list {
+            padding-left: 1.5rem;
+            margin-bottom: 1.25rem;
+            color: var(--text-secondary);
+        }
+
+        .policy-list li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .policy-list li strong {
+            color: var(--text-main);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: var(--surface-subtle);
+            border: 1px solid var(--border-highlight);
+            color: var(--primary);
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, rgba(0, 131, 143, 0.05) 0%, rgba(0, 176, 255, 0.08) 100%);
+            border: 1px solid rgba(0, 131, 143, 0.2);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .contact-line {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .contact-link {
+            color: var(--primary);
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: var(--surface);
+            border-top: 1px solid var(--border);
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 960px) {
+            .main-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .policy-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 2.5rem 1rem 2rem 1rem;
+            }
+
+            .hero-title {
+                font-size: 1.85rem;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: 0.6rem 0.75rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media print {
+            .site-header, .sidebar, .hero-tag, .status-pill, .site-footer {
+                display: none !important;
+            }
+            .main-wrapper {
+                grid-template-columns: 1fr;
+                margin: 0;
+                padding: 0;
+            }
+            .policy-content {
+                border: none;
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Site Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="#" class="brand-badge">
+                <div class="brand-logo">A</div>
+                <div class="brand-info">
+                    <h1>Amrton</h1>
+                    <p>Official Developer & Brand</p>
+                </div>
+            </a>
+            <div class="header-actions">
+                <div class="status-pill">
+                    <span class="status-dot"></span>
+                    <span>Active & Verified</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <span class="hero-tag">Google Play Console Compliance Document</span>
+            <h1 class="hero-title">Privacy Policy</h1>
+            <p class="hero-subtitle">
+                This policy outlines our commitments, data handling practices, and legal disclosures for the <strong>Infinity MultiView Browser</strong> application developed by <strong>Amrton</strong>.
+            </p>
+            <div class="metadata-grid">
+                <div class="metadata-item">
+                    <span class="metadata-label">Application:</span>
+                    <span class="metadata-value">Infinity MultiView Browser</span>
+                </div>
+                <div class="metadata-item">
+                    <span class="metadata-label">Package Name:</span>
+                    <span class="metadata-value">com.amrton.multiviewbrowser</span>
+                </div>
+                <div class="metadata-item">
+                    <span class="metadata-label">Developer:</span>
+                    <span class="metadata-value">Amrton</span>
+                </div>
+                <div class="metadata-item">
+                    <span class="metadata-label">Effective Date:</span>
+                    <span class="metadata-value" id="current-date">January 2026</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Layout -->
+    <main class="main-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <h2 class="sidebar-title">Table of Contents</h2>
+            <ul class="nav-list">
+                <li><a href="#overview" class="nav-link">1. Overview & Commitment</a></li>
+                <li><a href="#information-collection" class="nav-link">2. Data We Do Not Collect</a></li>
+                <li><a href="#local-data" class="nav-link">3. Local On-Device Data</a></li>
+                <li><a href="#webview-storage" class="nav-link">4. WebKit & WebView Data</a></li>
+                <li><a href="#foreground-service" class="nav-link">5. Background Services</a></li>
+                <li><a href="#third-party-services" class="nav-link">6. Third-Party Ad Services</a></li>
+                <li><a href="#permissions" class="nav-link">7. System Permissions</a></li>
+                <li><a href="#retention-deletion" class="nav-link">8. Data Control & Deletion</a></li>
+                <li><a href="#children" class="nav-link">9. Children's Privacy (COPPA)</a></li>
+                <li><a href="#gdpr-ccpa" class="nav-link">10. GDPR & CCPA Rights</a></li>
+                <li><a href="#security" class="nav-link">11. Data Security</a></li>
+                <li><a href="#updates" class="nav-link">12. Changes to Policy</a></li>
+                <li><a href="#contact" class="nav-link">13. Developer Contact</a></li>
+            </ul>
+        </aside>
+
+        <!-- Policy Article Body -->
+        <article class="policy-content">
+
+            <!-- Section 1 -->
+            <section id="overview" class="section-block">
+                <div class="section-header">
+                    <span class="section-number">01</span>
+                    <h2 class="section-title">Overview & Commitment</h2>
+                </div>
+                <p class="policy-text">
+                    Welcome to <strong>Infinity MultiView Browser</strong>, developed, distributed, and maintained by <strong>Amrton</strong> ("we", "us", or "our"). We believe strongly in transparency, minimal data collection, and user autonomy.
+                </p>
+                <div class="highlight-box">
+                    <p>
+                        Core Principle: Amrton does NOT operate remote user tracking servers, sell your browsing records, or log your personal web activities. Your browsing history, favorites, and settings exist strictly on your local device.
+                    </p>
+                </div>
+                <p class="policy-text">
+                    This Privacy Policy applies to the Infinity MultiView Browser mobile application available on the Google Play Store and explains what data is processed, how local storage operates, what third-party SDKs are integrated, and how your privacy is safeguarded.
+                </p>
+            </section>
+
+            <!-- Section 2 -->
+            <section id="information-collection" class="section-block">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2 class="section-title">Information We Do Not Collect</h2>
+                </div>
+                <p class="policy-text">
+                    Amrton does not collect, transmit, or harvest personally identifiable information (PII). Specifically:
+                </p>
+                <ul class="policy-list">
+                    <li><strong>No User Account:</strong> The application does not require user registration, email sign-ups, phone numbers, or passwords.</li>
+                    <li><strong>No Server-Side Tracking:</strong> We do not log what websites you visit, the URLs you type, or the content of the pages you view to any external servers.</li>
+                    <li><strong>No Location Data:</strong> The application does not request, access, or track your GPS location coordinates.</li>
+                    <li><strong>No Microphone / Camera / Contact Access:</strong> We do not request or access your private photos, contacts, camera, or microphone.</li>
+                </ul>
+            </section>
+
+            <!-- Section 3 -->
+            <section id="local-data" class="section-block">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2 class="section-title">Local On-Device Data Storage</h2>
+                </div>
+                <p class="policy-text">
+                    To deliver a seamless multi-view productivity experience, the application stores certain functional preferences locally on your device using Android's private app sandbox (SQLite Room Database and Encrypted SharedPreferences):
+                </p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Data Category</th>
+                            <th>Purpose</th>
+                            <th>Storage Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Browsing History</strong></td>
+                            <td>Allows you to review and reopen previously launched multi-screen URLs.</td>
+                            <td>Local Room Database (On-device sandbox only)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Saved Bookmarks</strong></td>
+                            <td>Stores your favorite shortcut websites for one-tap launching.</td>
+                            <td>Local Room Database (On-device sandbox only)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>User Preferences</strong></td>
+                            <td>Saves selected screen layout (1, 2, 4, 6, 8 screens), auto-reload timer interval, desktop/mobile user agent choice, and theme (Light/Dark).</td>
+                            <td>Local SharedPreferences (On-device sandbox only)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="policy-text">
+                    None of this local data is ever transmitted to Amrton or third parties. It remains stored exclusively in your device's isolated application storage.
+                </p>
+            </section>
+
+            <!-- Section 4 -->
+            <section id="webview-storage" class="section-block">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2 class="section-title">WebKit & Android System WebView Data</h2>
+                </div>
+                <p class="policy-text">
+                    Each browser tile in Infinity MultiView Browser runs using Android's official system-level <strong>WebKit / WebView</strong> component.
+                </p>
+                <p class="policy-text">
+                    When you browse websites:
+                </p>
+                <ul class="policy-list">
+                    <li>Cookies, session storage, and web cache are managed directly by Android's WebKit engine.</li>
+                    <li>These temporary web assets are isolated within your app container.</li>
+                    <li>You can clear all web cookies, cache, and history at any time using the in-app "Clear History" button or through Android System Settings &gt; Apps &gt; Infinity MultiView Browser &gt; Clear Storage.</li>
+                </ul>
+            </section>
+
+            <!-- Section 5 -->
+            <section id="foreground-service" class="section-block">
+                <div class="section-header">
+                    <span class="section-number">05</span>
+                    <h2 class="section-title">Foreground Services & Background Execution</h2>
+                </div>
+                <p class="policy-text">
+                    Infinity MultiView Browser includes an optional <strong>Background Execution Mode</strong> designed for users who want multi-screen audio, web streams, or background refresh loops to stay alive when switching between apps or locking their screen.
+                </p>
+                <ul class="policy-list">
+                    <li><strong>Service Notification:</strong> In compliance with Google Play Developer Program policies, whenever the background execution mode is activated, a persistent foreground notification is displayed in the Android notification drawer.</li>
+                    <li><strong>Transparency:</strong> This notification clearly informs you that a multi-view session is running in the background and provides an instant one-tap control to stop the service.</li>
+                    <li><strong>No Secret Background Processing:</strong> The foreground service executes exclusively while you have granted permission and terminates immediately when stopped or when the app process is closed.</li>
+                </ul>
+            </section>
+
+            <!-- Section 6 -->
+            <section id="third-party-services" class="section-block">
+                <div class="section-header">
+                    <span class="section-number">06</span>
+                    <h2 class="section-title">Third-Party Advertising & Services</h2>
+                </div>
+                <p class="policy-text">
+                    To keep Infinity MultiView Browser free to download and continuously supported, our application integrates official advertising SDKs provided by Google:
+                </p>
+                <div class="highlight-box">
+                    <p>
+                        Service Provider: Google Mobile Ads (AdMob) by Google LLC.<br>
+                        Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="contact-link">https://policies.google.com/privacy</a><br>
+                        Google Advertising Policy: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" class="contact-link">https://policies.google.com/technologies/ads</a>
+                    </p>
+                </div>
+                <p class="policy-text">
+                    Google AdMob may process non-personal diagnostic telemetry, IP address (for general country/city approximation), device type, and the Google Advertising ID (GAID) to deliver banner and interstitial advertisements:
+                </p>
+                <ul class="policy-list">
+                    <li><strong>Ad Personalization Control:</strong> You can reset or delete your Advertising ID at any time directly through your phone: <em>Android Settings &gt; Google &gt; Ads &gt; Reset or Delete advertising ID</em>.</li>
+                    <li><strong>Consent & European Regulations:</strong> In regions covered by GDPR / ePrivacy directives, consent for personalized vs. non-personalized advertising is handled in accordance with the Google User Messaging Platform (UMP).</li>
+                </ul>
+            </section>
+
+            <!-- Section 7 -->
+            <section id="permissions" class="section-block">
+                <div class="section-header">
+                    <span class="section-number">07</span>
+                    <h2 class="section-title">Android System Permissions</h2>
+                </div>
+                <p class="policy-text">
+                    Infinity MultiView Browser adheres strictly to the principle of least privilege, requesting only permissions essential to its core functions:
+                </p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Permission</th>
+                            <th>Classification</th>
+                            <th>Explicit Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="badge">INTERNET</span></td>
+                            <td>Normal (Install-time)</td>
+                            <td>Required to load web pages in browser tiles and fetch advertisements.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge">ACCESS_NETWORK_STATE</span></td>
+                            <td>Normal (Install-time)</td>
+                            <td>Monitors whether the device is connected to Wi-Fi or cellular data before initiating page reloads.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge">FOREGROUND_SERVICE</span></td>
+                            <td>Normal (Install-time)</td>
+                            <td>Allows user-requested background playback and multi-screen session persistence.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge">POST_NOTIFICATIONS</span></td>
+                            <td>Runtime (Android 13+)</td>
+                            <td>Required by Android OS to show the background session status notification.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge">REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</span></td>
+                            <td>Optional User Prompt</td>
+                            <td>Prevents Android OS from prematurely terminating active background reload loops.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Section 8 -->
+            <section id="retention-deletion" class="section-block">
+                <div class="section-header">
+                    <span class="section-number">08</span>
+                    <h2 class="section-title">Data Retention & Deletion Policy</h2>
+                </div>
+                <p class="policy-text">
+                    You have complete control over any local data stored by the application:
+                </p>
+                <ul class="policy-list">
+                    <li><strong>In-App Clear History:</strong> Opening the History tab and tapping the "Clear All History" button immediately purges all saved URL session entries from your device's local database.</li>
+                    <li><strong>Complete Deletion on Uninstall:</strong> Uninstalling the application automatically and permanently deletes all associated databases, bookmarks, caches, and SharedPreferences files from your device.</li>
+                    <li><strong>No Cloud Remnants:</strong> Since we do not transmit or store your data on external cloud servers, there are zero remote copies to purge.</li>
+                </ul>
+            </section>
+
+            <!-- Section 9 -->
+            <section id="children" class="section-block">
+                <div class="section-header">
+                    <span class="section-number">09</span>
+                    <h2 class="section-title">Children's Privacy (COPPA Compliance)</h2>
+                </div>
+                <p class="policy-text">
+                    Infinity MultiView Browser is a general utility productivity tool and is not directed to children under the age of 13 (or under 16 for residents of the European Economic Area).
+                </p>
+                <p class="policy-text">
+                    We do not knowingly collect personal information from children. If you are a parent or guardian and believe your child has used the browser without supervision, you can easily remove all local records by clearing the app data or uninstalling the app. If you have any inquiries, please contact us at <a href="mailto:amrtonofficial@gmail.com" class="contact-link">amrtonofficial@gmail.com</a>.
+                </p>
+            </section>
+
+            <!-- Section 10 -->
+            <section id="gdpr-ccpa" class="section-block">
+                <div class="section-header">
+                    <span class="section-number">10</span>
+                    <h2 class="section-title">GDPR & CCPA / CPRA Disclosures</h2>
+                </div>
+                <p class="policy-text">
+                    For users residing in the European Economic Area (EEA), United Kingdom, or California:
+                </p>
+                <ul class="policy-list">
+                    <li><strong>Right to Know & Access:</strong> You have the right to know what data is collected. All data processed by Amrton is visible locally within your app screens.</li>
+                    <li><strong>Right to Erasure / Deletion:</strong> You can exercise your right to erasure at any instant by using the in-app deletion button or clearing app storage.</li>
+                    <li><strong>No "Sale" of Personal Data:</strong> Amrton does not sell, rent, or trade your personal information or browsing records to third parties for monetary or valuable consideration.</li>
+                    <li><strong>Opt-Out of Targeted Advertising:</strong> You can opt out of interest-based ads via your Android system advertising controls.</li>
+                </ul>
+            </section>
+
+            <!-- Section 11 -->
+            <section id="security" class="section-block">
+                <div class="section-header">
+                    <span class="section-number">11</span>
+                    <h2 class="section-title">Data Security Practices</h2>
+                </div>
+                <p class="policy-text">
+                    We implement industry-standard mobile security architectures:
+                </p>
+                <ul class="policy-list">
+                    <li><strong>Android Sandbox Architecture:</strong> All local database and configuration files are stored inside your device's protected internal storage space, inaccessible to other unprivileged applications.</li>
+                    <li><strong>Encrypted Transport:</strong> All web requests initiated by the browser prioritize modern HTTPS transport protocols with end-to-end TLS encryption provided by the visited websites.</li>
+                    <li><strong>R8 Code Obfuscation & Shrinking:</strong> The application release binary is compiled and hardened using Google R8 full-mode optimization to prevent reverse-engineering and tampering.</li>
+                </ul>
+            </section>
+
+            <!-- Section 12 -->
+            <section id="updates" class="section-block">
+                <div class="section-header">
+                    <span class="section-number">12</span>
+                    <h2 class="section-title">Changes to this Privacy Policy</h2>
+                </div>
+                <p class="policy-text">
+                    We may update our Privacy Policy periodically to reflect app updates, new Android OS requirements, or changes in legal regulations. When changes occur, the updated policy will be published on this page with a revised "Effective Date". We encourage you to review this policy periodically.
+                </p>
+            </section>
+
+            <!-- Section 13 -->
+            <section id="contact" class="section-block">
+                <div class="section-header">
+                    <span class="section-number">13</span>
+                    <h2 class="section-title">Developer & Contact Information</h2>
+                </div>
+                <p class="policy-text">
+                    If you have questions, feedback, or legal inquiries regarding this Privacy Policy or Infinity MultiView Browser, please reach out to our official support team:
+                </p>
+                
+                <div class="contact-card">
+                    <h3 class="contact-title">Amrton</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">
+                        Official Developer & Publisher of Infinity MultiView Browser
+                    </p>
+                    <div class="contact-info">
+                        <div class="contact-line">
+                            <strong>Official Email:</strong>
+                            <a href="mailto:amrtonofficial@gmail.com" class="contact-link">amrtonofficial@gmail.com</a>
+                        </div>
+                        <div class="contact-line">
+                            <strong>Developer Brand:</strong>
+                            <span>Amrton Official</span>
+                        </div>
+                        <div class="contact-line">
+                            <strong>Platform:</strong>
+                            <span>Google Play Console</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">Amrton</div>
+            <p class="footer-desc">
+                High-performance productivity and multi-window web browsing solutions.
+            </p>
+            <p class="footer-copy">
+                &copy; <span id="current-year">2026</span> Amrton. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Dynamic Date & Year synchronization
+        const now = new Date();
+        const year = now.getFullYear();
+        const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        
+        const yearElem = document.getElementById('current-year');
+        if (yearElem) yearElem.textContent = year;
+
+        const dateElem = document.getElementById('current-date');
+        if (dateElem) dateElem.textContent = `${monthNames[now.getMonth()]} ${year}`;
+
+        // Smooth scroll for Table of Contents
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
