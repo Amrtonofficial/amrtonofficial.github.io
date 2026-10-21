@@ -272,19 +272,16 @@
     }
 
     .social-link {
+      width: 42px;
+      height: 42px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 78px;
-      padding: 8px 12px;
-      border-radius: 999px;
+      border-radius: 50%;
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--border);
       color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
       transition: all 0.2s ease;
     }
 
@@ -294,6 +291,19 @@
       background: rgba(255, 255, 255, 0.06);
       transform: translateY(-1px);
     }
+
+    .social-link svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    .social-link.telegram { color: #26A5E4; }
+    .social-link.whatsapp { color: #25D366; }
+    .social-link.youtube { color: #FF0000; }
+    .social-link.x { color: #E7E5E4; }
+    .social-link.instagram { color: #E1306C; }
+    .social-link.snapchat { color: #FFFC00; }
 
     footer a {
       color: var(--text-muted);
@@ -317,8 +327,8 @@
         font-size: 2.2rem;
       }
       .social-link {
-        min-width: 72px;
-        padding: 7px 10px;
+        width: 38px;
+        height: 38px;
       }
     }
   </style>
@@ -429,7 +439,7 @@
 
         <div class="app-links">
           <a href="https://play.google.com/store/search?q=Infinity+Multi+View+Browser&c=apps" class="btn btn-primary" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.03 2.03 0 0 1-.223-.974V2.788c0-.36.08-.7.222-.974zm11.235 11.238l2.298 2.298-11.83 6.83 9.532-9.128zm0-2.104L5.312 1.814 15.844 11.95l-1-1.002zm1.012-2.993l3.678 2.123c.873.503.873 1.76 0 2.263l-3.678 2.123-2.30-2.165 2.33-2.344z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.03 2.03 0 0 1-.223-.974V2.788c0-.36.08-.7.222-.974zm11.235 11.238l2.298 2.298-11.83 6.83 9.532-9.128zm0-2.104L5.312 1.814 15.844 11.95l-1-1.002zm1.012-2.993l3.678 2.123c.873.503.873 1.76 0 2.263l-3.678 2.123-2.33-2.165 2.33-2.344z"/></svg>
             Google Play
           </a>
           <a href="/privacy/infinitymultiviewbrowser.html" class="btn btn-secondary">
@@ -526,13 +536,30 @@
         <a href="/app-ads.txt">app-ads.txt</a>
       </div>
 
-      <div class="social-links">
-        <a href="https://t.me/Amrtonofficial" class="social-link" target="_blank" rel="noopener">Telegram</a>
-        <a href="https://wa.me/Amrtonofficial" class="social-link" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="https://www.youtube.com/@Amrtonofficial" class="social-link" target="_blank" rel="noopener">YouTube</a>
-        <a href="https://x.com/Amrtonofficial" class="social-link" target="_blank" rel="noopener">X</a>
-        <a href="https://instagram.com/Amrtonofficial" class="social-link" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.snapchat.com/add/Amrtonofficial" class="social-link" target="_blank" rel="noopener">SnapChat</a>
+      <div class="social-links" aria-label="Social media links">
+        <a href="https://t.me/Amrtonofficial" class="social-link telegram" target="_blank" rel="noopener" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 20.745c-.44 0-.364-.165-.515-.579l-1.29-4.245 8.693-5.381c.398-.244.766.06.491.437l-7.38 6.663-.302 2.705zm-1.62-7.857l8.985-5.881c.982-.59 1.902.46 1.374 1.287l-7.602 7.083-2.757-2.489zm-3.617 1.99l2.678 2.09-.135 1.233c-.038.333-.334.467-.617.282l-2.407-1.717a.75.75 0 0 1 .481-1.288z"/></svg>
+        </a>
+
+        <a href="https://wa.me/Amrtonofficial" class="social-link whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9.94 9.94 0 0 0-8.66 15.1L2 22l5.06-1.36A9.98 9.98 0 1 0 12 2zm5.63 14.08c-.24.68-1.4 1.26-1.93 1.33-.5.07-1.14.09-3.68-.8-3.12-1.13-5.14-4.05-5.29-4.24-.15-.19-1.22-1.63-1.22-3.11 0-1.48.78-2.21 1.06-2.52.28-.31.62-.38.82-.38h.58c.18 0 .44.01.68.52.28.59.96 2.04 1.05 2.19.09.15.15.34.03.54-.12.19-.18.31-.36.48-.18.18-.38.41-.54.54-.18.18-.37.38-.16.72.21.34.93 1.54 2 2.49 1.37 1.22 2.52 1.6 2.87 1.78.35.18.56.15.77-.09.21-.24 1.08-1.25 1.37-1.68.29-.43.58-.35.97-.21.39.15 2.48 1.17 2.9 1.38.42.21.7.32.8.5.1.18.1.99-.14 1.67z"/></svg>
+        </a>
+
+        <a href="https://www.youtube.com/@Amrtonofficial" class="social-link youtube" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3.1 3.1 0 0 0-2.18-2.2C19.4 3.5 12 3.5 12 3.5s-7.4 0-9.32.5A3.1 3.1 0 0 0 .5 6.2 32.5 32.5 0 0 0 0 12a32.5 32.5 0 0 0 .5 5.8 3.1 3.1 0 0 0 2.18 2.2c1.92.5 9.32.5 9.32.5s7.4 0 9.32-.5a3.1 3.1 0 0 0 2.18-2.2A32.5 32.5 0 0 0 24 12a32.5 32.5 0 0 0-.5-5.8zM9.75 15.5V8.5l6.5 3.5-6.5 3.5z"/></svg>
+        </a>
+
+        <a href="https://x.com/Amrtonofficial" class="social-link x" target="_blank" rel="noopener" aria-label="X">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2h3.33l-7.28 8.32L23 22h-6.59l-5.16-7.17L5.25 22H1.9l7.79-8.9L1 2h6.74l4.67 6.7L18.9 2zm-1.16 18h1.84L7.1 3.9H5.17L17.74 20z"/></svg>
+        </a>
+
+        <a href="https://instagram.com/Amrtonofficial" class="social-link instagram" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zm5.25-3.25a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25z"/></svg>
+        </a>
+
+        <a href="https://www.snapchat.com/add/Amrtonofficial" class="social-link snapchat" target="_blank" rel="noopener" aria-label="Snapchat">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.82 13.17c-.4.25-.9.44-1.42.58-.1.03-.27.09-.36.13-.18.08-.17.64-.17.64s.17.1.24.17c.08.09.18.2.21.46.04.4-.08.7-.38 1-.29.28-.82.47-1.38.47-.26 0-.54-.03-.81-.07a2.63 2.63 0 0 1-.26-.05c-.16-.04-.26-.05-.37.04-.14.12-.17.32-.28.5-.24.36-.72.6-1.3.6-.57 0-1.03-.23-1.27-.59-.18-.27-.16-.49-.3-.61-.22-.17-.44-.16-.7-.14-.31.03-.6.09-.9.09-.56 0-1.08-.18-1.38-.47-.3-.3-.42-.6-.38-1 .04-.26.13-.38.22-.46.06-.07.24-.17.24-.17s0-.55-.17-.64c-.09-.04-.25-.1-.36-.13-.52-.14-1.02-.33-1.42-.58-.58-.38-.9-.93-.9-1.58 0-.54.22-1.03.6-1.43a2.02 2.02 0 0 1 1.4-.56c.04 0 .08.01.12.01.38.05.72-.22.84-.57.18-.54.66-.88 1.13-.88h.12c.48 0 .95.34 1.13.88.12.35.46.62.84.57.04 0 .08-.01.12-.01a2.02 2.02 0 0 1 1.4.56c.38.4.6.89.6 1.43 0 .65-.32 1.2-.9 1.58zm-6.82-7.44A4.57 4.57 0 0 1 12 4.5a4.57 4.57 0 0 1 4.09 2.23c.75.1 1.38.45 1.87 1.06.46.58.7 1.34.7 2.2 0 .55-.1 1.08-.3 1.56-.17.43-.45.81-.82 1.13a.84.84 0 0 1-.27.18c-.2.08-.39.12-.61.13l-.2.01c-.21 0-.38-.04-.56-.11-.15-.06-.3-.14-.42-.25-.17-.16-.27-.36-.31-.6-.06-.36-.02-.71.11-1.02.13-.31.33-.58.57-.82.16-.15.34-.28.53-.4.27-.18.47-.45.55-.77.23-.87-.12-1.82-.92-2.44a2.96 2.96 0 0 0-2.04-.84 2.96 2.96 0 0 0-2.04.84c-.8.62-1.15 1.57-.92 2.44.08.32.28.6.55.77.19.12.37.25.53.4.24.24.44.51.57.82.13.31.17.66.11 1.02-.04.24-.14.44-.31.6-.12.11-.27.19-.42.25-.18.07-.35.11-.56.11l-.2-.01c-.21-.01-.41-.05-.61-.13a.84.84 0 0 1-.27-.18c-.37-.32-.65-.7-.82-1.13-.2-.48-.3-1.01-.3-1.56 0-.86.24-1.62.7-2.2.49-.61 1.12-.96 1.87-1.06z"/></svg>
+        </a>
       </div>
     </footer>
   </div>
