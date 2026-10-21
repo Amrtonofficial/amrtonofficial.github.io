@@ -3,119 +3,372 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - AMR Music Player</title>
+    <title>Privacy Policy - AMR Music Player | Amrton</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #2D3748;
-            background-color: #F7FAFC;
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --card-border: #334155;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-primary: #6366f1;
+            --accent-glow: rgba(99, 102, 241, 0.15);
+            --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            --badge-bg: #312e81;
+            --badge-text: #c7d2fe;
+            --callout-bg: #0f172a;
+            --callout-border: #4f46e5;
+            --link-color: #818cf8;
+            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg-color: #f8fafc;
+                --card-bg: #ffffff;
+                --card-border: #e2e8f0;
+                --text-main: #0f172a;
+                --text-muted: #64748b;
+                --accent-primary: #4f46e5;
+                --accent-glow: rgba(79, 70, 229, 0.08);
+                --badge-bg: #e0e7ff;
+                --badge-text: #3730a3;
+                --callout-bg: #f1f5f9;
+                --callout-border: #6366f1;
+                --link-color: #4f46e5;
+                --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 24px;
+            padding: 0;
         }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 32px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
         .container {
-            max-width: 800px;
+            max-width: 860px;
             margin: 0 auto;
-            background: #FFFFFF;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 48px;
+            box-shadow: var(--shadow);
         }
-        h1 {
-            color: #1A202C;
-            border-bottom: 2px solid #E2E8F0;
-            padding-bottom: 12px;
-            margin-top: 0;
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--card-border);
         }
+
+        .brand-badge {
+            background: var(--accent-gradient);
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            padding: 6px 14px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+
+        .app-title {
+            font-size: 32px;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            background-color: var(--accent-glow);
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            padding: 20px;
+            margin: 24px 0 36px 0;
+            font-size: 14px;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .meta-label {
+            color: var(--text-muted);
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .meta-value {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .meta-value a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        .meta-value a:hover {
+            text-decoration: underline;
+        }
+
         h2 {
-            color: #2B6CB0;
-            margin-top: 28px;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-top: 36px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 20px;
+            background: var(--accent-gradient);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+
         ul {
             padding-left: 20px;
+            margin-bottom: 20px;
         }
+
         li {
-            margin-bottom: 8px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            font-size: 15px;
         }
-        .meta-info {
-            background-color: #EDF2F7;
-            padding: 12px 16px;
-            border-radius: 8px;
-            margin-bottom: 24px;
-            font-size: 14px;
+
+        li strong {
+            color: var(--text-main);
         }
+
+        .callout-box {
+            background-color: var(--callout-bg);
+            border-left: 4px solid var(--callout-border);
+            border-radius: 0 12px 12px 0;
+            padding: 18px 20px;
+            margin: 20px 0;
+        }
+
+        .callout-box p {
+            margin-bottom: 0;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .highlight-pill {
+            display: inline-block;
+            background-color: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            margin-left: 6px;
+        }
+
         .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #E2E8F0;
-            font-size: 14px;
-            color: #718096;
+            margin-top: 50px;
+            padding-top: 24px;
+            border-top: 1px solid var(--card-border);
             text-align: center;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 12px;
+            }
+            .container {
+                padding: 24px 18px;
+                border-radius: 14px;
+            }
+            .app-title {
+                font-size: 24px;
+            }
+            .meta-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Privacy Policy for AMR Music Player</h1>
-        
-        <div class="meta-info">
-            <strong>Effective Date:</strong> August 21, 2026<br>
-            <strong>Developer & Brand:</strong> Amrton<br>
-            <strong>Contact Email:</strong> amrtonofficial@gmail.com
+        <div class="header-brand">
+            <span class="brand-badge">Official Brand Policy</span>
+            <span style="color: var(--text-muted); font-size: 14px; font-weight: 600;">Amrton Security & Privacy</span>
+        </div>
+
+        <h1 class="app-title">Privacy Policy for AMR Music Player</h1>
+        <p style="font-size: 16px; color: var(--text-muted);">
+            Comprehensive privacy guidelines detailing how <strong>AMR Music Player</strong> protects your personal data, handles device permissions, and maintains strict zero-tracking standards.
+        </p>
+
+        <div class="meta-grid">
+            <div class="meta-item">
+                <span class="meta-label">Effective Date</span>
+                <span class="meta-value">October 21, 2026</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Developer & Brand</span>
+                <span class="meta-value">Amrton</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Official Support</span>
+                <span class="meta-value"><a href="mailto:Support@amrton.com">Support@amrton.com</a></span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Official URL</span>
+                <span class="meta-value"><a href="https://apps.amrton.com/privacy/amrmusicplayer.html" target="_blank" rel="noopener">apps.amrton.com/privacy</a></span>
+            </div>
+        </div>
+
+        <div class="callout-box">
+            <p>🔒 <strong>Zero Third-Party Tracking Guarantee:</strong> AMR Music Player is designed as an offline-first high-fidelity media player. We do not collect, harvest, monetize, sell, or transmit any personally identifiable information (PII) or device media files.</p>
         </div>
 
         <h2>1. Introduction</h2>
-        <p>Welcome to <strong>AMR Music Player</strong>, developed and published by <strong>Amrton</strong>. Your privacy is paramount to us. This Privacy Policy outlines how our application collects, uses, handles, and protects your information when you use our Android application.</p>
+        <p>
+            Welcome to <strong>AMR Music Player</strong>, developed and published by <strong>Amrton</strong> ("we", "us", or "our"). We are deeply committed to respecting and safeguarding the privacy of our users. This Privacy Policy details our operational practices regarding data collection, system permissions, local storage utilization, and network usage when you use our Android application.
+        </p>
 
-        <h2>2. Information Collection and Usage</h2>
-        <p><strong>AMR Music Player</strong> is designed primarily as an offline media player. We respect your personal data and privacy.</p>
+        <h2>2. Information Collection and Device Permissions</h2>
+        <p>
+            AMR Music Player requests specific Android system permissions strictly necessary to deliver core audio playback, playlist management, and user customization.
+        </p>
 
-        <h3>A. Device Media & Storage Permission (READ_MEDIA_AUDIO / READ_EXTERNAL_STORAGE)</h3>
+        <h3>A. Media & Audio Files Permission (<code style="color: var(--accent-primary);">READ_MEDIA_AUDIO</code> / <code style="color: var(--accent-primary);">READ_EXTERNAL_STORAGE</code>) <span class="highlight-pill">Core Requirement</span></h3>
         <ul>
-            <li><strong>Purpose:</strong> To scan, display, and play audio files stored on your device's local storage.</li>
-            <li><strong>Data Handling:</strong> All audio files, metadata, and album artwork remain stored locally on your device. We <strong>do not</strong> upload, backup, or transfer your audio files or personal media to any external servers or cloud services.</li>
+            <li><strong>Purpose:</strong> Required to scan, index, organize, and play locally stored audio tracks and display embedded album art on your device.</li>
+            <li><strong>Data Handling:</strong> All media indexing and playback take place exclusively on your local device. Your music files, metadata, and audio content are <strong>never</strong> uploaded, backed up, or shared to any external server, cloud infrastructure, or third party.</li>
         </ul>
 
-        <h3>B. System Settings Permission (WRITE_SETTINGS)</h3>
+        <h3>B. System Settings Permission (<code style="color: var(--accent-primary);">WRITE_SETTINGS</code>) <span class="highlight-pill">Optional</span></h3>
         <ul>
-            <li><strong>Purpose:</strong> Requested only if you explicitly choose to use the "Set as Ringtone" feature within the app.</li>
-            <li><strong>Data Handling:</strong> This permission is strictly used to update your device's system ringtone preference as requested. No setting modifications occur without your explicit user action.</li>
+            <li><strong>Purpose:</strong> Requested only if you explicitly choose the "Set as Ringtone" feature within the app.</li>
+            <li><strong>Data Handling:</strong> Used solely to update your device's default system ringtone upon your direct action. No other system parameters are modified.</li>
         </ul>
 
-        <h3>C. Network Access (INTERNET)</h3>
+        <h3>C. Notification & Foreground Service Permissions (<code style="color: var(--accent-primary);">POST_NOTIFICATIONS</code> / <code style="color: var(--accent-primary);">FOREGROUND_SERVICE</code>)</h3>
         <ul>
-            <li><strong>Purpose:</strong> Used solely for optional online lyrics fetching (via public APIs such as LRCLIB) and metadata lookup.</li>
-            <li><strong>Data Handling:</strong> Only non-personal queries containing track title and artist name are sent to retrieve lyrics. No personal information, user identifiers, or device telemetry are transmitted.</li>
+            <li><strong>Purpose:</strong> Enables background playback and displays the active media player widget with media controls in your notification shade and lock screen.</li>
+            <li><strong>Data Handling:</strong> Local system control only. No telemetry or notification data is collected or transmitted.</li>
         </ul>
 
-        <h3>D. Local App Storage</h3>
+        <h3>D. Network Access (<code style="color: var(--accent-primary);">INTERNET</code>)</h3>
         <ul>
-            <li><strong>Purpose:</strong> To persist user preferences, created playlists, favorite tracks, playback history, equalizer settings, and home screen widget preferences.</li>
-            <li><strong>Data Handling:</strong> All user data is stored locally in the application's private storage on your device.</li>
+            <li><strong>Purpose:</strong> Utilized solely for optional online synchronized lyrics fetching (via open public APIs such as LRCLIB) and missing metadata retrieval.</li>
+            <li><strong>Data Handling:</strong> Only generic non-personal search queries (containing track title and artist name) are sent to retrieve lyrics. No personal identifiers, advertising IDs, or telemetry data are sent during network requests.</li>
         </ul>
 
-        <h2>3. Personal Data & Third-Party Sharing</h2>
+        <h2>3. Local Storage & Data Persistence</h2>
+        <p>
+            All user-generated app state—including custom playlists, favorite tracks, playback history, equalizer presets, home screen widget configurations, and visual themes—is saved exclusively inside your device's private sandbox storage (<code style="color: var(--accent-primary);">App Local Storage</code>).
+        </p>
+        <p>
+            Uninstalling the application or clearing the application data through Android System Settings permanently removes all locally saved application preferences.
+        </p>
+
+        <h2>4. Analytics, Advertising & Third-Party Disclosure</h2>
         <ul>
-            <li><strong>No Personal Identifiable Information (PII) Collection:</strong> We do not require account creation, registration, or submission of personal details (such as your name, email address, or phone number) to use AMR Music Player.</li>
-            <li><strong>No Data Selling or Sharing:</strong> We do not sell, rent, trade, or share any user data with third parties, advertisers, or analytics brokers.</li>
-            <li><strong>No Third-Party Analytics / Ads Tracking:</strong> AMR Music Player does not include third-party tracking, advertising SDKs, or profiling tools.</li>
+            <li><strong>No Advertising SDKs:</strong> AMR Music Player contains zero advertisements, banner ads, interstitial pop-ups, or ad tracking frameworks (such as AdMob or Meta Audience Network).</li>
+            <li><strong>No Analytics Profiling:</strong> We do not integrate third-party telemetry, crash-reporting SDKs, or behavioral profiling tools (such as Google Analytics or Firebase Analytics).</li>
+            <li><strong>No Data Selling or Monetization:</strong> We do not sell, rent, trade, or share user data with advertisers, data brokers, or third parties under any circumstances.</li>
         </ul>
 
-        <h2>4. Children's Privacy</h2>
-        <p>Our application does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children. If you are a parent or guardian and are aware that your child has provided us with personal data, please contact us so we can take necessary actions.</p>
-
-        <h2>5. Changes to This Privacy Policy</h2>
-        <p>We may update our Privacy Policy from time to time. You are advised to review this page periodically for any changes. Any updates will be posted here with a revised "Effective Date".</p>
-
-        <h2>6. Contact Us</h2>
-        <p>If you have any questions, suggestions, or concerns regarding this Privacy Policy, please contact us:</p>
+        <h2>5. User Rights & Data Controls</h2>
+        <p>
+            Because all application data remains stored on your local hardware, you retain full ownership and control over your data at all times:
+        </p>
         <ul>
-            <li><strong>Developer:</strong> Amrton</li>
-            <li><strong>Email:</strong> <a href="mailto:amrtonofficial@gmail.com">amrtonofficial@gmail.com</a></li>
+            <li><strong>Permission Revocation:</strong> You can grant or revoke storage and system permissions at any time via <em>Android Settings &gt; Apps &gt; AMR Music Player &gt; Permissions</em>.</li>
+            <li><strong>Data Deletion:</strong> You can clear all app-created playlists, settings, and caches by selecting <em>Clear Data / Clear Cache</em> in system settings or utilizing the in-app reset controls.</li>
         </ul>
+
+        <h2>6. Children's Privacy Protection (COPPA / GDPR-K)</h2>
+        <p>
+            AMR Music Player does not collect personal data from anyone, including children under the age of 13 (or under 16 in the European Union). Our application complies fully with the Children's Online Privacy Protection Act (COPPA) and General Data Protection Regulation (GDPR). If you have any concerns regarding children's privacy, please contact us immediately.
+        </p>
+
+        <h2>7. Data Security</h2>
+        <p>
+            We prioritize data security by adhering to strict security architecture principles. By storing user data locally and eliminating server-side transmission of media files, your personal information is protected against unauthorized online intercept, data breaches, and remote leaks.
+        </p>
+
+        <h2>8. Updates to This Privacy Policy</h2>
+        <p>
+            We may periodically update this Privacy Policy to reflect changes in legal requirements or application enhancements. Any revisions will be published directly on this page with an updated "Effective Date". We encourage you to review this page periodically.
+        </p>
+
+        <h2>9. Contact Us</h2>
+        <p>
+            If you have questions, feedback, or inquiries regarding this Privacy Policy or our security practices, please contact us at:
+        </p>
+        <div class="callout-box" style="border-left-color: #a855f7;">
+            <p style="margin-bottom: 6px;"><strong>Brand & Developer:</strong> Amrton</p>
+            <p style="margin-bottom: 6px;"><strong>Official Support Email:</strong> <a href="mailto:Support@amrton.com" style="color: var(--link-color); font-weight: bold;">Support@amrton.com</a></p>
+            <p style="margin-bottom: 0;"><strong>Official Website:</strong> <a href="https://apps.amrton.com/privacy/amrmusicplayer.html" target="_blank" rel="noopener" style="color: var(--link-color);">https://apps.amrton.com/privacy/amrmusicplayer.html</a></p>
+        </div>
 
         <div class="footer">
-            &copy; 2026 Amrton. All rights reserved.
+            <p>© 2026 Amrton. All rights reserved.</p>
+            <p style="margin-top: 6px; font-size: 12px; color: var(--text-muted);">AMR Music Player is an official brand product of Amrton.</p>
         </div>
     </div>
 </body>
