@@ -40,7 +40,6 @@
       overflow-x: hidden;
     }
 
-    /* Ambient background glow */
     body::before {
       content: "";
       position: fixed;
@@ -62,7 +61,6 @@
       flex: 1;
     }
 
-    /* Header */
     header {
       text-align: center;
       margin-bottom: 56px;
@@ -108,7 +106,6 @@
       margin: 0 auto;
     }
 
-    /* Apps Grid */
     .apps-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -148,15 +145,26 @@
       width: 56px;
       height: 56px;
       border-radius: 14px;
-      background: linear-gradient(135deg, #1e293b, #0f172a);
       border: 1px solid var(--border);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
       flex-shrink: 0;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      color: #fff;
+      text-transform: uppercase;
     }
+
+    .icon-yt { background: linear-gradient(135deg, #f59e0b, #ef4444); }
+    .icon-music { background: linear-gradient(135deg, #10b981, #06b6d4); }
+    .icon-video { background: linear-gradient(135deg, #8b5cf6, #3b82f6); }
+    .icon-browser { background: linear-gradient(135deg, #ec4899, #8b5cf6); }
+    .icon-sudoku { background: linear-gradient(135deg, #14b8a6, #2dd4bf); }
+    .icon-volume { background: linear-gradient(135deg, #f97316, #facc15); }
+    .icon-ai { background: linear-gradient(135deg, #6366f1, #22c55e); }
 
     .app-meta {
       flex: 1;
@@ -186,7 +194,6 @@
       margin-bottom: 24px;
     }
 
-    /* Links & Buttons */
     .app-links {
       display: flex;
       align-items: center;
@@ -238,7 +245,6 @@
       fill: currentColor;
     }
 
-    /* Footer */
     footer {
       border-top: 1px solid var(--border);
       padding: 32px 0 16px;
@@ -254,6 +260,39 @@
       gap: 16px;
       margin-top: 10px;
       flex-wrap: wrap;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 78px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: all 0.2s ease;
+    }
+
+    .social-link:hover {
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.06);
+      transform: translateY(-1px);
     }
 
     footer a {
@@ -277,6 +316,10 @@
       header h1 {
         font-size: 2.2rem;
       }
+      .social-link {
+        min-width: 72px;
+        padding: 7px 10px;
+      }
     }
   </style>
 </head>
@@ -292,11 +335,10 @@
     </header>
 
     <main class="apps-grid">
-      <!-- App 1 Card -->
       <article class="app-card">
         <div>
           <div class="app-header">
-            <div class="app-icon">▶️</div>
+            <div class="app-icon icon-yt">YT</div>
             <div class="app-meta">
               <span class="category-tag">Creator Tools</span>
               <h2 class="app-title">YtWatchTime Likes Subs</h2>
@@ -308,7 +350,7 @@
         </div>
 
         <div class="app-links">
-          <a href="https://play.google.com/store/search?q=YT+Watch+Time+Likes+Subs&c=apps" class="btn btn-primary" target="_blank" rel="noopener">
+          <a href="https://play.google.com/store/search?q=YtWatchTime+Likes+Subs&c=apps" class="btn btn-primary" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.03 2.03 0 0 1-.223-.974V2.788c0-.36.08-.7.222-.974zm11.235 11.238l2.298 2.298-11.83 6.83 9.532-9.128zm0-2.104L5.312 1.814 15.844 11.95l-1-1.002zm1.012-2.993l3.678 2.123c.873.503.873 1.76 0 2.263l-3.678 2.123-2.33-2.165 2.33-2.344z"/></svg>
             Google Play
           </a>
@@ -319,11 +361,10 @@
         </div>
       </article>
 
-      <!-- App 2 Card -->
       <article class="app-card">
         <div>
           <div class="app-header">
-            <div class="app-icon">🎵</div>
+            <div class="app-icon icon-music">AM</div>
             <div class="app-meta">
               <span class="category-tag">Music</span>
               <h2 class="app-title">Amr Music Player</h2>
@@ -346,11 +387,10 @@
         </div>
       </article>
 
-      <!-- App 3 Card -->
       <article class="app-card">
         <div>
           <div class="app-header">
-            <div class="app-icon">🎬</div>
+            <div class="app-icon icon-video">AV</div>
             <div class="app-meta">
               <span class="category-tag">Video</span>
               <h2 class="app-title">Amr Video Player</h2>
@@ -373,11 +413,10 @@
         </div>
       </article>
 
-      <!-- App 4 Card -->
       <article class="app-card">
         <div>
           <div class="app-header">
-            <div class="app-icon">🌐</div>
+            <div class="app-icon icon-browser">IM</div>
             <div class="app-meta">
               <span class="category-tag">Browser</span>
               <h2 class="app-title">Infinity Multi View Browser</h2>
@@ -390,7 +429,7 @@
 
         <div class="app-links">
           <a href="https://play.google.com/store/search?q=Infinity+Multi+View+Browser&c=apps" class="btn btn-primary" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.03 2.03 0 0 1-.223-.974V2.788c0-.36.08-.7.222-.974zm11.235 11.238l2.298 2.298-11.83 6.83 9.532-9.128zm0-2.104L5.312 1.814 15.844 11.95l-1-1.002zm1.012-2.993l3.678 2.123c.873.503.873 1.76 0 2.263l-3.678 2.123-2.33-2.165 2.33-2.344z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.03 2.03 0 0 1-.223-.974V2.788c0-.36.08-.7.222-.974zm11.235 11.238l2.298 2.298-11.83 6.83 9.532-9.128zm0-2.104L5.312 1.814 15.844 11.95l-1-1.002zm1.012-2.993l3.678 2.123c.873.503.873 1.76 0 2.263l-3.678 2.123-2.30-2.165 2.33-2.344z"/></svg>
             Google Play
           </a>
           <a href="/privacy/infinitymultiviewbrowser.html" class="btn btn-secondary">
@@ -400,11 +439,10 @@
         </div>
       </article>
 
-      <!-- App 5 Card -->
       <article class="app-card">
         <div>
           <div class="app-header">
-            <div class="app-icon">🧩</div>
+            <div class="app-icon icon-sudoku">SA</div>
             <div class="app-meta">
               <span class="category-tag">Puzzle</span>
               <h2 class="app-title">Sudoku Arya</h2>
@@ -427,11 +465,10 @@
         </div>
       </article>
 
-      <!-- App 6 Card -->
       <article class="app-card">
         <div>
           <div class="app-header">
-            <div class="app-icon">🔊</div>
+            <div class="app-icon icon-volume">VC</div>
             <div class="app-meta">
               <span class="category-tag">Utility</span>
               <h2 class="app-title">Volume Controller</h2>
@@ -454,11 +491,10 @@
         </div>
       </article>
 
-      <!-- App 7 Card -->
       <article class="app-card">
         <div>
           <div class="app-header">
-            <div class="app-icon">📈</div>
+            <div class="app-icon icon-ai">AI</div>
             <div class="app-meta">
               <span class="category-tag">Creator Tools</span>
               <h2 class="app-title">AI Pixel Repair</h2>
@@ -488,6 +524,15 @@
         <a href="mailto:Amrtonofficial@gmail.com">Contact Support</a>
         <span class="divider">&bull;</span>
         <a href="/app-ads.txt">app-ads.txt</a>
+      </div>
+
+      <div class="social-links">
+        <a href="https://t.me/Amrtonofficial" class="social-link" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://wa.me/Amrtonofficial" class="social-link" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.youtube.com/@Amrtonofficial" class="social-link" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://x.com/Amrtonofficial" class="social-link" target="_blank" rel="noopener">X</a>
+        <a href="https://instagram.com/Amrtonofficial" class="social-link" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.snapchat.com/add/Amrtonofficial" class="social-link" target="_blank" rel="noopener">SnapChat</a>
       </div>
     </footer>
   </div>
